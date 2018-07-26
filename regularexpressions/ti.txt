@@ -1,0 +1,182 @@
+- DHCP Server: eigener Prozess?
+- 
+
+These are the high-level requirements of our sw components:
+HighLevel: (ndk + threading)
+  - dhcp-server
+    - broadcast recv - bind(67)
+    - udp broadcast send broadcastsend(68)
+    - read recv thread
+    - or process
+  - tftp-client
+    - sendto, bind
+    - recv-thread
+  - rpc-framework
+    - bind(rpcport 30456)
+    - recv-thread
+
+...and those are the underlying abstractions we use for this:
+
+  * Socket -> see socket api below
+
+  * We need a facility for setting and managing timeouts. The abstractions we use has the following interface that we need to implement on TI.  
+    - ITimeoutManager2.h
+      - virtual ErrorCode set(AbstractTimeout& timeout, uint32 time, bool cyclic = false) = 0;
+      - virtual void cancel(AbstractTimeout& timeout) = 0;
+
+  * For TCP we use an abstraction for our tcp/ip stack from which we need the following functionalities:
+    - TCPStack functionality
+      - localIpAddress   
+      - netmask
+      - gw
+    - Optional:  join(multicast addresse)
+
+One current implementation based on posix uses these posix-features:
+  - Thread (like pthread) including thread local storage, join, ...
+  - sem_t
+  - pthread_mutex_t
+  - pthread_cond_t, pthread_condattr_t
+  - monotonic time
+
+---------------------
+
+Our Socket abstraction:
+
+namespace udp
+{
+
+class ISocketWrapper
+{
+public:
+	enum { INVALID_PORT = 0xFFFF };
+	/**
+	 * all ErrorCodes used by socket
+	 * @enum	ErrorCode
+	 */
+	enum ErrorCode
+	{
+		/** everything ok */
+		UDP_SOCKET_OK,
+		/** an error occurred */
+		UDP_SOCKET_NOT_OK,
+		/** no IDataListener registerd */
+		UDP_SOCKET_NO_DATA_LISTENER
+	};
+
+	/**
+	 * Binds this UDPSocket to a specific port & local address
+	 * @param	port	local port
+	 * @return	status of method
+	 * 			- UDP_SOCKET_OK	when everything was fine
+	 * 			- UDP_SOCKET_NOT_OK when somehing went wrong
+	 */
+	virtual ErrorCode bind(uint16 port) = 0;
+
+	/**
+	 * Returns the binding state of the socket.
+	 * @return	binding state of the socket
+	 * 			- false: not bound
+	 * 			- true: bound
+	 */
+	virtual bool isBound() const = 0;
+
+	/**
+	 * Closes this UDP-socket
+	 * @return	status of method
+	 * 			- UDP_SOCKET_OK	when everything was fine
+	 * 			- UDP_SOCKET_NOT_OK when somehing went wrong
+	 */
+	virtual void close() = 0;
+
+	/**
+	 * Returns whether the socket is closed or not.
+	 * @return	state of the socket
+	 * 			- false: not closed
+	 * 			- true: closed
+	 */
+	virtual bool isClosed() const = 0;
+
+	/**
+	 * Connects the socket to a remote address for this socket.
+	 * @param	address	remote IpAddress
+	 * @param	port	remote port
+	 * @return	status of method
+	 * 			- UDP_SOCKET_OK	when everything was fine
+	 * 			- UDP_SOCKET_NOT_OK when somehing went wrong
+	 */
+	virtual ErrorCode connect(const ip::IpAddress& address, uint16 port) = 0;
+
+	/**
+	 * Disconnects the socket
+	 */
+	virtual void disconnect() = 0;
+
+	/**
+	 * Returns the connection state of the socket.
+	 * @return	connection state of the socket
+	 * 			- false: not connected
+	 * 			- true: connected
+	 */
+	virtual bool isConnected() const = 0;
+
+	/**
+	 * reads a given number of bytes from the socket
+	 * @param	buffer	buffer to receive data to. If 0L is passed the n
+	 * bytes should be skipped, i.e. the input stream has to advance by
+	 * n bytes.
+	 * @param	n		max number of bytes to receive
+	 * @return	number of bytes really read
+	 * 			- 0: an error occurred reading from the socket
+	 * 			- else: bytes read
+	 */
+	virtual uint16 read(uint8* buffer, uint16 n) = 0;
+
+	/**
+	 * sends an amount of data
+	 * @param	buffer	data to send
+	 * @param	n		number of bytes to send
+	 * may be 0L, in which case no notification is given when data is sent.
+	 * @return	status of transmission
+	 * 			- UDP_SOCKET_OK	when data was sent to UDP stack
+	 * 			- UDP_SOCKET_NOT_OK when socket has not been opened
+	 * @note
+	 * sending the data may be asynchronous. for this reason the
+	 * IDataSendNotificationListener has a appropriate callback.
+	 */
+	virtual ErrorCode send(const uint8* buffer, uint16 n) = 0;
+
+	/**
+	 * Sends a DatagramPacket.
+	 * @return	status of transmission
+	 * 			- UDP_SOCKET_OK	when data was sent to UDP stack
+	 * 			- UDP_SOCKET_NOT_OK when socket has not been opened
+	 */
+	virtual ErrorCode send(const DatagramPacket& packet) = 0;
+
+	/**
+	 * sets the listener to this socket instance
+	 * @param	pListener	IDataListener to attach
+	 */
+	virtual void setDataListener(IDataListener* pListener) = 0;
+
+	/**
+	 * @return	IpAddress the socket is connected to, 0L if not connected
+	 */
+	virtual const ip::IpAddress* getRemoteIpAddress() const = 0;
+
+	/**
+	 * @return	Local IpAddress, 0L if this operation is not allowed
+	 */
+	virtual const ip::IpAddress* getLocalIpAddress() = 0;
+
+	/**
+	 * Returns remote port if connected, INVALID_PORT otherwise
+	 */
+	virtual uint16 getRemotePort() const = 0;
+
+	virtual uint16 getLocalPort() const = 0;
+protected:
+	IDataListener*	fpDataListener;
+};
+
+} //namespace udp  

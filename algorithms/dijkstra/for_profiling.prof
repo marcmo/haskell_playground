@@ -1,0 +1,65 @@
+	Wed Jun 20 21:29 2012 Time and Allocation Profiling Report  (Final)
+
+	   for_profiling +RTS -p -K100M -RTS
+
+	total time  =       23.98 secs   (23985 ticks @ 1000 us, 1 processor)
+	total alloc =  48,487,092 bytes  (excludes profiling overheads)
+
+COST CENTRE                  MODULE         %time %alloc
+
+addRandomEdges.addEdge       GraphGenerator  99.8   84.1
+genRandomTree.makeRandomEdge GraphGenerator   0.1    2.7
+randomPair                   GraphGenerator   0.1    1.8
+randomPermutation.\          GraphGenerator   0.0    7.2
+addRandomEdges.addEdge.m.\   GraphGenerator   0.0    2.3
+
+
+                                                                                           individual     inherited
+COST CENTRE                           MODULE                             no.     entries  %time %alloc   %time %alloc
+
+MAIN                                  MAIN                               229           0    0.0    0.0   100.0  100.0
+ main                                 GraphGenerator                     460           0    0.0    0.0   100.0   99.9
+  doTest                              GraphGenerator                     461           0    0.0    0.0   100.0   99.9
+   doTest.(...)                       GraphGenerator                     465           1    0.0    0.0     0.0    0.0
+    runDijkstra                       Dijkstra                           466           1    0.0    0.0     0.0    0.0
+     runDijkstra.(...)                Dijkstra                           468           1    0.0    0.0     0.0    0.0
+      dijkstraS                       Dijkstra                           469           1    0.0    0.0     0.0    0.0
+       dijkstraS.q0                   Dijkstra                           472           1    0.0    0.0     0.0    0.0
+       decrease                       Dijkstra                           471           1    0.0    0.0     0.0    0.0
+       dijkstraS.loop                 Dijkstra                           470           1    0.0    0.0     0.0    0.0
+     runDijkstra.d                    Dijkstra                           467           1    0.0    0.0     0.0    0.0
+   doTest.cost                        GraphGenerator                     464           1    0.0    0.0     0.0    0.0
+   doTest.t                           GraphGenerator                     462           1    0.0    0.2   100.0   99.9
+    genRandomGraph                    GraphGenerator                     463           1    0.0    0.0   100.0   99.7
+     genRandomTree                    GraphGenerator                     481           1    0.0    0.9     0.1   10.8
+      genRandomTree.makeRandomEdge    GraphGenerator                     484        1999    0.1    2.7     0.1    2.7
+       genRandomTree.makeRandomEdge.\ GraphGenerator                     485        1999    0.0    0.0     0.0    0.0
+      randomPermutation               GraphGenerator                     482           1    0.0    0.0     0.0    7.2
+       randomPermutation.\            GraphGenerator                     483           1    0.0    7.2     0.0    7.2
+     addRandomEdges                   GraphGenerator                     474           1    0.0    0.4    99.9   88.9
+      addRandomEdges.addEdge          GraphGenerator                     477         651   99.8   84.1    99.9   88.5
+       addRandomEdges.addEdge.m       GraphGenerator                     480           1    0.0    0.0     0.0    2.3
+        addRandomEdges.addEdge.m.\    GraphGenerator                     486        1999    0.0    2.3     0.0    2.3
+       randomPair                     GraphGenerator                     478           1    0.1    1.8     0.1    2.0
+        randomPair.freqs              GraphGenerator                     479           1    0.0    0.2     0.0    0.2
+      addRandomEdges.upper            GraphGenerator                     476           1    0.0    0.0     0.0    0.0
+     genRandomGraph.symEdges          GraphGenerator                     473           1    0.0    0.1     0.0    0.1
+ CAF:main1                            GraphGenerator                     452           0    0.0    0.0     0.0    0.0
+  main                                GraphGenerator                     458           1    0.0    0.0     0.0    0.0
+   doTest                             GraphGenerator                     459           1    0.0    0.0     0.0    0.0
+ CAF:lvl3_rrfk                        GraphGenerator                     444           0    0.0    0.0     0.0    0.0
+  addRandomEdges                      GraphGenerator                     475           0    0.0    0.0     0.0    0.0
+ CAF:genSymCostFunction_$dEq          GraphGenerator                     443           0    0.0    0.0     0.0    0.0
+ CAF                                  System.Random.Shuffle              349           0    0.0    0.0     0.0    0.0
+ CAF                                  Test.QuickCheck.Arbitrary          299           0    0.0    0.0     0.0    0.0
+ CAF                                  Test.QuickCheck.Gen                298           0    0.0    0.0     0.0    0.0
+ CAF                                  System.Random                      293           0    0.0    0.0     0.0    0.0
+ CAF                                  Data.Time.Clock.POSIX              292           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.Conc.Signal                    283           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Encoding                    275           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Encoding.Iconv              273           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Handle.FD                   266           0    0.0    0.1     0.0    0.1
+ CAF                                  GHC.TopHandler                     257           0    0.0    0.0     0.0    0.0
+ CAF                                  Data.Fixed                         253           0    0.0    0.0     0.0    0.0
+ CAF                                  System.CPUTime                     249           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.Integer.Logarithms.Internals   237           0    0.0    0.0     0.0    0.0

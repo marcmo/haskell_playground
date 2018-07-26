@@ -1,0 +1,15 @@
+Dict	ProjectTemplate.hs	20
+addToDict	ProjectTemplate.hs	23
+applyTemplate	ProjectTemplate.hs	88
+breakWord	ProjectTemplate.hs	42
+cpDir	ProjectTemplate.hs	98
+cpFile	ProjectTemplate.hs	103
+failWhenM	ProjectTemplate.hs	65
+fillTemplate	ProjectTemplate.hs	116
+getValue	ProjectTemplate.hs	26
+ifM	ProjectTemplate.hs	61
+initProject	ProjectTemplate.hs	67
+main	ProjectTemplate.hs	47
+queryValue	ProjectTemplate.hs	31
+today	ProjectTemplate.hs	58
+transformName	ProjectTemplate.hs	125

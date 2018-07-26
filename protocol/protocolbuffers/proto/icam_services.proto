@@ -1,0 +1,15 @@
+package service.icam;
+
+import "icam.proto";
+import "common.proto";
+
+service ICam {
+	rpc configureCamera(CameraConfiguration) returns(service.Void);
+	rpc startStreaming(service.Void) returns(CalibrationStatus);
+	rpc stopStreaming(service.Void) returns(service.Void);
+	rpc performSelfCheck(service.Void) returns(service.Void);
+	rpc getCameraStatus(service.Void) returns (CameraStatus);
+	rpc shutdown(service.Void) returns(service.Void);
+	rpc reset(service.Void) returns(service.Void);
+	rpc switchToBootloader(service.Void) returns(service.Void);
+}

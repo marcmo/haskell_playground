@@ -1,0 +1,49 @@
+	Wed Aug 10 10:12 2011 Time and Allocation Profiling Report  (Final)
+
+	   cycleShift_profiling +RTS -p -K100M -RTS
+
+	total time  =        0.08 secs   (4 ticks @ 20 ms)
+	total alloc = 194,516,896 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+comb                           Main                  75.0   16.4
+cycleShift                     Main                  25.0   28.9
+modAdd                         Main                   0.0   53.5
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 266           1   0.0    0.0     0.0    0.0
+ CAF:main2               Main                                                 260           1   0.0    0.0     0.0    0.0
+  main                   Main                                                 267           0   0.0    0.0     0.0    0.0
+ CAF:main3               Main                                                 259           1   0.0    0.0     0.0    0.0
+ CAF:end                 Main                                                 258           1   0.0    0.0   100.0   99.1
+  end                    Main                                                 269       10001   0.0    0.1   100.0   99.1
+   step                  Main                                                 273       10000   0.0    0.2   100.0   99.0
+    cycleShift           Main                                                 276       10000  25.0   28.9    25.0   28.9
+    modAdd               Main                                                 274       10000   0.0   53.5    75.0   69.9
+     comb                Main                                                 281      998970  75.0   16.4    75.0   16.4
+ CAF:allshifts           Main                                                 257           1   0.0    0.0     0.0    0.5
+  allshifts              Main                                                 270           1   0.0    0.5     0.0    0.5
+ CAF:start               Main                                                 256           1   0.0    0.0     0.0    0.0
+  start                  Main                                                 275           1   0.0    0.0     0.0    0.0
+ CAF:main8               Main                                                 255           1   0.0    0.0     0.0    0.0
+  start                  Main                                                 278           0   0.0    0.0     0.0    0.0
+ CAF:main9               Main                                                 254           1   0.0    0.0     0.0    0.0
+  start                  Main                                                 279           0   0.0    0.0     0.0    0.0
+ CAF:main10              Main                                                 253           1   0.0    0.0     0.0    0.0
+  start                  Main                                                 280           0   0.0    0.0     0.0    0.0
+ CAF:seqSize             Main                                                 252           1   0.0    0.0     0.0    0.0
+  seqSize                Main                                                 277           1   0.0    0.0     0.0    0.0
+ CAF:main5               Main                                                 251           1   0.0    0.0     0.0    0.4
+  allshifts              Main                                                 271           0   0.0    0.4     0.0    0.4
+ CAF:numShifts           Main                                                 250           1   0.0    0.0     0.0    0.0
+  numShifts              Main                                                 272           1   0.0    0.0     0.0    0.0
+ CAF:lvl2_r15k           Main                                                 249           1   0.0    0.0     0.0    0.0
+  comb                   Main                                                 282           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     186           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                144           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      141           1   0.0    0.0     0.0    0.0

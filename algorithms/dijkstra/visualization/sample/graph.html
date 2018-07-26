@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Force-Directed Layout</title>
+	<style type="text/css">
+	circle {
+	  stroke-width: 1.5px;
+	}
+
+	line {
+	  stroke: #999;
+	}
+	</style>
+    <script type="text/javascript" src="../d3.v2.js"></script>
+    <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script> -->
+    <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js"></script> -->
+    <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js"></script> -->
+  </head>
+  <body>
+	<script type="text/javascript">
+	var w = 960,
+	    h = 600,
+	    r = 3,
+	    fill = d3.scale.category20();
+
+
+	
+	d3.json("data2.json", function(json) {
+		
+		var svg = d3.select("body").append("svg:svg").attr("width", w).attr("height", h);
+		
+	    var yearPos = {},
+			y0 = 2002,
+			y1 = 2012,
+			length = y1-y0+1,
+			rad = Math.PI / 180,
+			eW = 600/2,
+			eH = 270/2;
+		
+		
+		for (i=0; i<length; i++) {
+			var year=y0+i,
+				angle = 360*i/length,
+				x,y;
+				
+				x = w/2+eW*Math.cos(angle*rad);
+				y = h/2+eH*Math.sin(angle*rad);
+			yearPos[year] = {x:x, y:y};
+		}
+		
+		var link = svg.selectAll("line").data(json.links).enter().append("svg:line")
+					.attr("stroke-width", function(d) { return d.value; })
+					.attr("stroke", "red")
+					.attr("class", "link")
+					.attr("source", function(d) { return d.source; })
+					.attr("target", function(d) { return d.target; })
+					;
+					
+		
+		var node = svg.selectAll("circle")
+					.data(json.nodes)
+					.enter()
+					.append("svg:circle")
+					.attr("r", function(d) {
+						return r*Math.sqrt(d.value);
+	    			})
+					.style("fill", function(d) {
+	        			return fill(d.group);
+	    			})
+					.style("stroke", function(d) {
+	        			return d3.rgb(fill(d.group)).darker();
+	    			})
+					.attr("class", "node")
+					.attr("id", function(d) { return d.name; })
+					.on("mouseover", fade(true))
+					.on("mouseout", fade(false));
+					
+		var labels = svg.append("svg:g").selectAll("g")
+						.data(json.nodes)
+						.enter().append("svg:g")
+			labels.append("svg:text")
+				.attr("y",".31em")
+				.attr("text-anchor", "middle")
+				.text(function(d) { return (isNaN(d.name)) ? "" : d.name;})
+				.attr("class", "label")
+							
+		var force = d3.layout.force()
+			.linkDistance(20)
+			.size([w, h])
+			.nodes(json.nodes)
+			.links(json.links)
+			.charge(function(d,i) { return -d.value*50;})
+			.on("tick", tick).start();
+	
+
+	    var linkedByIndex = {};
+	    json.links.forEach(function(d) {
+	        linkedByIndex[d.source.index + "," + d.target.index] = 1;
+	    });
+		
+		
+
+	    function isConnected(a, b) {
+	        return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+	    }
+	
+	    function tick(e) {
+	//	if (e.alpha >= .0051) return;
+			
+			node.attr("id", function(d){return d.index;})
+			
+	        node.attr("cx", function(d) {
+				if (d.group==1) {
+					return d.x = yearPos[d.name]['x'];
+				}
+				else {
+					return d.x = Math.max(r, Math.min(w - r, d.x));
+				}
+	            
+	        }).attr("cy", function(d) {
+				if (d.group==1) {
+					return d.y = yearPos[d.name]['y'];
+				}
+				else {
+					return d.y = Math.max(r, Math.min(w - r, d.y));
+				}
+	        });
+	
+			labels.attr("transform", function(d) {
+				return "translate(" + d.x + "," + d.y +")"
+			});
+
+	        link.attr("x1", function(d) {
+	            return d.source.x;
+	        }).attr("y1", function(d) {
+	            return d.source.y;
+	        }).attr("x2", function(d) {
+	            return d.target.x;
+	        }).attr("y2", function(d) {
+	            return d.target.y;
+	        });
+	    }
+
+	    function fade(bo) {
+	        return function(d) {
+				var opacity = bo ? .2: 1; 
+		
+	            node.style("stroke-opacity", function(o) {
+	                thisOpacity = isConnected(d, o) ? 1 : opacity;
+	                this.setAttribute('fill-opacity', thisOpacity);
+	                return thisOpacity;
+	            });
+	            labels.style("fill-opacity", function(o) {
+	                return thisOpacity = isConnected(d, o) ? 1 : opacity;
+	            });
+	
+
+				
+				if (bo) {
+					
+					labels.append("svg:text")
+						.attr("y",".31em")
+						.attr("y",-10)
+						.attr("text-anchor", "middle")
+						.text(function(o) { return isConnected(d, o) && isNaN(o.name) ? o.name : "";})
+						.attr("class","writer")
+				}
+				else {
+					svg.selectAll("text.writer").text("")
+				}
+				 
+					
+			
+	            link.style("stroke-opacity", function(o) {
+	                return o.source === d || o.target === d ? 1 : opacity;
+	            });
+	
+			
+	        };
+	    }
+	})
+	</script>
+	
+  </body>
+</html>
+

@@ -1,0 +1,50 @@
+import Qngn.Pune
+import Flfgrz.Raivebazrag
+import Flfgrz.VB
+import Flfgrz.Qverpgbel
+import Pbageby.Zbanq
+import dhnyvsvrq Qngn.Frg nf F
+import Qngn.Yvfg(vagrefcrefr)
+import Qroht.Genpr
+
+ebg13 :: Pune -> Pune
+ebg13 p
+| gbYbjre p >= 'n' && gbYbjre p <= 'z' = pue (beq p + 13)
+| gbYbjre p >= 'a' && gbYbjre p <= 'm' = pue (beq p - 13)
+| bgurejvfr = p
+
+uVagrenpg :: (Fgevat -> Fgevat) -> Unaqyr -> Unaqyr -> VB ()
+uVagrenpg s uVa uBhg = qb
+vaYvarf <- yvarf `sznc` uTrgPbagragf uVa
+yrg bhgYvarf = znc s vaYvarf
+uChgFge uBhg (hayvarf bhgYvarf)
+
+cebprffOlGrzc :: (Unaqyr -> Unaqyr -> VB ()) -> Fgevat -> VB ()
+cebprffOlGrzc s anzr = qb
+uVa <- bcraSvyr anzr ErnqZbqr
+yrg gzc = anzr ++ "$"
+uBhg <- bcraSvyr gzc JevgrZbqr
+s uVa uBhg
+uPybfr uVa
+uPybfr uBhg
+-- erzbirSvyr anzr
+-- eranzrSvyr gzc anzr
+
+cebprff :: (Unaqyr -> Unaqyr -> VB ()) -> [Fgevat] -> VB ()
+cebprff s [] = s fgqva fgqbhg
+cebprff s af = zncZ_ (cebprffOlGrzc s) af
+
+znva = qb
+anzrf <- trgNetf
+chgFgeYa $ "anzrf:" ++ fubj anzrf
+cebprff (uVagrenpg ebg13jbeqf) anzrf
+
+ebg13jbeqf :: Fgevat -> Fgevat
+ebg13jbeqf k = (genpr $ "jbeqf: " ++ fubj jf) erfhyg
+jurer jf = jbeqf k
+ebgJ j = vs j `F.zrzore` erfreirqJbeqf gura j ryfr (znc ebg13 j)
+ebgngrqJf = znc ebgJ jf
+erfhyg = pbapng $ vagrefcrefr " " ebgngrqJf
+
+erfreirqJbeqf = F.sebzYvfg ["vzcbeg","::","++"]
+

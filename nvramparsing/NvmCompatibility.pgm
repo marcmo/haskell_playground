@@ -1,0 +1,123 @@
+NvmConfig FEM {
+
+  Block SwcCfCfKeyTypeFrequency  {
+  Compatibility 188, 4
+  }
+  Block SwcCfCfEcuSgbmHwabLogisticData  {
+  Compatibility 192, 6
+  }
+  Block SwcCfCfFondCommanderId  {
+  Compatibility 198, 6
+  }
+  Block SwcCfCfKeyProgDate  {
+  Compatibility 204, 6
+  }
+  Block SwcCfCfKeyStartCycleCount  {
+  Compatibility 210, 6
+  }
+  Block SwcCfCfKeyWakeUpNr  {
+  Compatibility 216, 6
+  }
+  Block SwcCfCfRegistrationDate  {
+  Compatibility 222, 6
+  }
+  Block SwcCfCfTeleSenderSequenceCount0  {
+  Compatibility 228, 6
+  }
+  Block SwcCfCfTeleSenderSequenceCount1  {
+  Compatibility 234, 6
+  }
+  Block SwcTcIntegrationTcState  {
+  Compatibility 240, 7
+  }
+  Block SwcCfCfKeyInitPlantStation  {
+  Compatibility 247, 10
+  }
+  Block SwcCfCfTeleSenderInitData0  {
+  Compatibility 257, 10
+  }
+  Block SwcCfCfTeleSenderInitData1  {
+  Compatibility 267, 10
+  }
+  Block SwcCfCfEcuDefaultRandom  {
+  Compatibility 277, 38
+  }
+  Block SwcLampsDriverLampsKurzschlusscounterAbs  {
+  Compatibility 315, 66
+  }
+  Block SwcTcIntegrationTcIntegrationPimMontageMode {
+  Compatibility 381, 3
+  }
+  Block SwcCfCfKeySequenceCount0 {
+  Compatibility 384, 6
+  }
+  Block SwcCfCfKeySequenceCount1 {
+  Compatibility 390, 6
+  }
+  Block SwcCfCfKeySequenceCount2 {
+  Compatibility 396, 6
+  }
+  Block SwcCfCfKeySequenceCount3 {
+  Compatibility 402, 6
+  }
+  Block SwcCfCfKeySequenceCount4 {
+  Compatibility 408, 6
+  }
+  Block SwcCfCfKeySequenceCount5 {
+  Compatibility 414, 6
+  }
+  Block SwcCfCfKeySequenceCount6 {
+  Compatibility 420, 6
+  }
+  Block SwcCfCfKeySequenceCount7 {
+  Compatibility 426, 6
+  }
+  Block SwcCfCfKeySequenceCount8 {
+  Compatibility 432, 6
+  }
+  Block SwcCfCfKeySequenceCount9 {
+  Compatibility 438, 6
+  }
+  Block SwcCfCfKeySequenceCount10 {
+  Compatibility 444, 6
+  }
+  Block SwcCfCfKeySequenceCount11 {
+  Compatibility 450, 6
+  }
+  Block SwcCfCfKeySequenceCount12 {
+  Compatibility 456, 6
+  }
+  Block SwcCfCfKeySequenceCount13 {
+  Compatibility 462, 6
+  }
+  Block SwcCfCfKeySequenceCount14 {
+  Compatibility 468, 6
+  }
+  Block SwcCfCfKeySequenceCount15 {
+  Compatibility 474, 6
+  }
+  Block SwcCfCfKeySequenceCount16 {
+  Compatibility 480, 6
+  }
+  Block SwcCfCfKeySequenceCount17 {
+  Compatibility 486, 6
+  }
+  Block SwcCfCfKeySequenceCount18 {
+  Compatibility 492, 6
+  }
+  Block SwcCfCfKeySequenceCount19 {
+  Compatibility 498, 6
+  }
+  Block SwcSfDfzDfzKey {
+  Compatibility 504, 18
+  }
+  Block SwcSfDfzDfzLfKey {
+  Compatibility 522, 4
+  }
+  Block SwcSfPiaClientFemNvmPiaId {
+  Compatibility 526, 4
+  }
+  Block SwcSfPiaClientFemNvmPiaProfile {
+  Compatibility 530, 156
+  }
+}

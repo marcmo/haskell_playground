@@ -1,0 +1,33 @@
+require 'rake/clean'
+
+outputfile = "output.out"
+TestDir="Test"
+CLEAN.include(outputfile)
+CLEAN.include('**/*.o')
+CLEAN.include('**/*.hi')
+CLEAN.include('dist')
+CLEAN.include('output.txt')
+Executable = 'dist/build/macrogeneration/macrogeneration'
+SrcFiles = FileList.new('*.hs')
+
+file Executable => SrcFiles do
+  sh "runhaskell Setup.lhs configure"
+  sh "runhaskell Setup.lhs build"
+end
+
+desc "run program on data (use run [n] for parameter number)"
+task :run, :number, :needs => Executable do |t, args|
+	args.with_defaults(:number => "50")
+	puts "number was: #{args.number}"
+	if Rake::application.unix?
+	 	sh "#{Executable} #{args.number.to_i}"
+	end
+	if Rake::application.windows?
+		sh "dist\\build\\macrogeneration\\macrogeneration #{args.number.to_i}"
+	end
+end
+
+
+task :build => [Executable]
+
+task :default => [:clean, :build]

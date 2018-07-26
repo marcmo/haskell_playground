@@ -1,0 +1,17 @@
+EdgeId	./Ubigraph.hs	7
+Url	./Ubigraph.hs	5
+VertexId	./Ubigraph.hs	6
+clear	./Ubigraph.hs	15
+defaultServer	./Ubigraph.hs	9
+newEdge	./Ubigraph.hs	21
+newEdgeWithId	./Ubigraph.hs	37
+newVertex	./Ubigraph.hs	18
+newVertexWithId	./Ubigraph.hs	34
+nodeStyle	VacuumUbigraph.hs	13
+removeEgde	./Ubigraph.hs	27
+removeVertex	./Ubigraph.hs	24
+setEdgeAttribute	./Ubigraph.hs	43
+setVertexAttribute	./Ubigraph.hs	40
+view	VacuumUbigraph.hs	39
+void	./Ubigraph.hs	12
+zeroOnSuccess	./Ubigraph.hs	31

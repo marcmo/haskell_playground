@@ -1,0 +1,48 @@
+NvmConfig FEM {
+
+  Block SwcCfCfKeyTypeFrequency  {
+  Compatibility 188, 4
+  }
+  Block SwcCfCfEcuSgbmHwabLogisticData  {
+  Compatibility 192, 6
+  }
+  Block SwcCfCfFondCommanderId  {
+  Compatibility 198, 6
+  }
+  Block SwcCfCfKeyProgDate  {
+  Compatibility 204, 6
+  }
+  Block SwcCfCfKeyStartCycleCount  {
+  Compatibility 210, 6
+  }
+  Block SwcCfCfKeyWakeUpNr  {
+  Compatibility 216, 6
+  }
+  Block SwcCfCfRegistrationDate  {
+  Compatibility 222, 6
+  }
+  Block SwcCfCfTeleSenderSequenceCount0  {
+  Compatibility 228, 6
+  }
+  Block SwcCfCfTeleSenderSequenceCount1  {
+  Compatibility 234, 6
+  }
+  Block SwcTcIntegrationTcState  {
+  Compatibility 240, 7
+  }
+  Block SwcCfCfKeyInitPlantStation  {
+  Compatibility 247, 10
+  }
+  Block SwcCfCfTeleSenderInitData0  {
+  Compatibility 257, 10
+  }
+  Block SwcCfCfTeleSenderInitData1  {
+  Compatibility 267, 10
+  }
+  Block SwcCfCfEcuDefaultRandom  {
+  Compatibility 277, 38
+  }
+  Block SwcLampsDriverLampsKurzschlusscounterAbs  {
+  Compatibility 315, 64
+  }
+}

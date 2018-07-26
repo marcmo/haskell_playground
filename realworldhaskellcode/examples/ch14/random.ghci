@@ -1,0 +1,5 @@
+:load Random
+
+--# twoBadRandoms
+twoBadRandoms `fmap` getStdGen
+twoBadRandoms2 `fmap` getStdGen

@@ -1,0 +1,37 @@
+G	GraphGenerator.hs	13;"	d
+Link	./GraphSerializer.hs	10;"	d
+Link	./GraphSerializer.hs	10;"	t
+LinkList	./GraphSerializer.hs	12;"	d	file:
+LinkList	./GraphSerializer.hs	12;"	t	file:
+PrevMap	./Dijkstra2.hs	27;"	t	file:
+PrevState	./Dijkstra2.hs	28;"	t	file:
+TheGraph	GraphGenerator.hs	13;"	t
+Weight	./Dijkstra2.hs	26;"	t
+Weights	./MinimumSpanningTree.hs	11;"	t
+addRandomEdges	GraphGenerator.hs	66;"	v
+buildTree	GraphGenerator.hs	47;"	v
+collectEdges	GraphGenerator.hs	74;"	v
+decrease	./Dijkstra2.hs	73;"	v	file:
+decreaseList	./Dijkstra2.hs	74;"	v	file:
+decreaseListS	./Dijkstra2.hs	56;"	v	file:
+decreaseS	./Dijkstra2.hs	52;"	v	file:
+dijkstra	./Dijkstra2.hs	30;"	v
+dijkstraS	./Dijkstra2.hs	40;"	v
+fromL	./MinimumSpanningTree.hs	13;"	v
+g	./Dijkstra2.hs	76;"	v	file:
+genCostFunction	GraphGenerator.hs	55;"	v
+genCostFunction2	GraphGenerator.hs	58;"	v
+inReach	./Dijkstra2.hs	69;"	v	file:
+infinity	./Dijkstra2.hs	71;"	v	file:
+kruskal	./MinimumSpanningTree.hs	17;"	v
+main	GraphGenerator.hs	29;"	v
+meCost	./Dijkstra2.hs	78;"	v	file:
+randomPermutation	GraphGenerator.hs	80;"	v
+run	./MinimumSpanningTree.hs	14;"	v
+runDijkstra	./Dijkstra2.hs	62;"	v	file:
+test	./MinimumSpanningTree.hs	26;"	v
+test2	./Dijkstra2.hs	60;"	v
+testMe	./Dijkstra2.hs	84;"	v
+traceBack	./Dijkstra2.hs	65;"	v	file:
+updateMap	./Dijkstra2.hs	59;"	v	file:
+writeGraph	./GraphSerializer.hs	29;"	v

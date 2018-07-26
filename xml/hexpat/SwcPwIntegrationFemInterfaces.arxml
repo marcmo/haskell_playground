@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/2.1.4" xsi:schemaLocation="http://autosar.org/2.1.4 autosar.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS/>
+    <SDGS/>
+  </ADMIN-DATA>
+  <TOP-LEVEL-PACKAGES>
+    <AR-PACKAGE UUID="dd5b7a9d-6ed1-4003-a984-9ee4dc5c4a27">
+      <SHORT-NAME>interfaces</SHORT-NAME>
+      <ELEMENTS>
+        <SENDER-RECEIVER-INTERFACE UUID="66c471f8-bef3-4275-be84-b15647e2cc13">
+          <SHORT-NAME>IPwCcm</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="0d3ace0c-79fc-49af-903f-40f7153aa87e">
+              <SHORT-NAME>ccmId0x0103PwEksNormingRequired</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c22ecc87-92ae-46e4-8b7c-8ad1730ca0cf">
+              <SHORT-NAME>ccmId0x0105PwEksErrorOrInitRequired</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="0b3218ab-8200-4d39-8058-d187035c578e">
+          <SHORT-NAME>IPwIntegrationFemComATemp</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="0bb2b220-19de-4073-aef6-149e457feb36">
+              <SHORT-NAME>comTempEx</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="4839eda9-f41c-4061-a4f8-8a36df8c5fea">
+          <SHORT-NAME>IPwComBedienungShdMds</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="a22d59bb-a306-4803-8e30-7c8c13612ee7">
+              <SHORT-NAME>comOpSwShdmds</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="96e885a8-c892-4138-a122-1c6d92943a9e">
+          <SHORT-NAME>IPwComCrash</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="10b5df2e-5110-443f-8f91-0444f7aaaf38">
+              <SHORT-NAME>comCtrCrClsy</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="81d3ffde-3d4b-4268-88d8-8bd737d11f25">
+          <SHORT-NAME>IPwComCtrCabrf</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="e9d36714-468e-486e-869f-ca138a165367">
+              <SHORT-NAME>comRqRlsCabrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="82211f2e-7ff3-49b4-8c1d-8deefb345fc0">
+              <SHORT-NAME>comRqCtrWrgCabrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="3eb07b5f-2a77-4703-ae5b-b8150a4f3a78">
+          <SHORT-NAME>IPwComCtrFhBft</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="deda074d-f96c-4c0a-a3a0-bba332d288ca">
+              <SHORT-NAME>comCtrWrgPsdPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="54d1b69b-e8be-4946-8dc4-6d316574d489">
+          <SHORT-NAME>IPwIntegrationFemComCtrFhBfth</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="65718c30-2221-4b08-a71f-d356497ae854">
+              <SHORT-NAME>comCtrWrgDrdPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="108d95d8-02d8-4cbe-930e-7f03d315ef12">
+              <SHORT-NAME>comCtrWrgPsdPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="0d1b98a4-a153-4261-8681-aae63643ed06">
+              <SHORT-NAME>comCtrWrgDvdrPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="32991d54-4497-4730-8fd3-723bf7a05d0b">
+              <SHORT-NAME>comCtrWrgPsdrPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="9063d36c-d7ad-4721-b324-93ae1a791dad">
+          <SHORT-NAME>IPwComCtrFhFat</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="b9fa2c03-f51d-44c0-b29c-e16799b4bb87">
+              <SHORT-NAME>comOpChislDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="2e397b02-f9c2-4a5a-a5c6-4b6603e81bbf">
+              <SHORT-NAME>comCtrWrgPsdDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="8117fe01-f781-429d-b82a-2b9e518e76a3">
+              <SHORT-NAME>comCtrWrgPsdrDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="2688627a-0456-4abf-9bc5-47188c48fbfd">
+              <SHORT-NAME>comCtrWrgDvdrDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="aa7830a5-6c6f-47a2-b69c-18e07b31d415">
+              <SHORT-NAME>comCtrWrgDrdDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="81d16707-a2ec-45c1-b3c9-179007897bf6">
+          <SHORT-NAME>IPwIntegrationFemComCtrFhFath</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="91b24a97-1c91-44f6-a53a-9962d38843e4">
+              <SHORT-NAME>comCtrWrgDrdDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="872a3533-b011-4dc8-b237-3c54dcb273ed">
+              <SHORT-NAME>comCtrWrgPsdDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="4f192a14-7bb6-4e31-9778-c72a5b2432d3">
+              <SHORT-NAME>comCtrWrgDvdrDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d4e8ec77-bea3-4f0c-91ab-72a9ea402099">
+              <SHORT-NAME>comCtrWrgPsdrDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="f81c4825-6d02-443b-99ef-009f96ef623d">
+          <SHORT-NAME>IPwComCtrFhShdZentrale</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="a7f386a8-1417-4b10-98eb-ad4258216840">
+              <SHORT-NAME>comStWrgEnb</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="9e1c446b-2fa3-4a86-9b3d-6cfc178ff7b1">
+              <SHORT-NAME>comStStsrEnb</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="3eae4046-636c-4b94-8a9e-12464b71b4c7">
+              <SHORT-NAME>comStPanMod</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c69f5318-1100-4013-929a-e8a10aa5868f">
+              <SHORT-NAME>comStChisl</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="ae7fc52c-4c1a-44ca-80da-220f908691c3">
+              <SHORT-NAME>comStCffu</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="fac0a2f8-70dd-49c9-8412-5334ad0c7bbd">
+              <SHORT-NAME>comCtrWrgPsdCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="66fc8d56-6017-4a07-9d53-216181db76a5">
+              <SHORT-NAME>comCtrWrgPsdrCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="28298100-56bc-4ec2-9ae6-10b68a15d9ba">
+              <SHORT-NAME>comCtrWrgDvdrCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="0d996088-59b0-40d0-add3-0f119b4afb11">
+              <SHORT-NAME>comCtrWrgDrdCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d96457ab-c580-4525-bd9e-07682808b58c">
+              <SHORT-NAME>comCtrStsrCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e20e3f86-c6ca-405a-be2a-d6235edc094d">
+              <SHORT-NAME>comCtrSrblCntr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="7754d6e9-f8e6-40a5-8006-366dfaaa90ec">
+              <SHORT-NAME>comCtrChisl</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="5110c9f9-a913-4abf-a240-651e1e6c920f">
+              <SHORT-NAME>comAuthWrgStsr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="13fc2aca-c519-4b42-b39e-790885d64595">
+          <SHORT-NAME>IPwComCtrPblSbDrdLin</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="288b4922-e0eb-4f6f-a970-562cbd696637">
+              <SHORT-NAME>comCtrLedFnbut1Lin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="b43cf0ae-4a3c-4249-91e4-83c85b5e5416">
+              <SHORT-NAME>comCtrLedFnbut2Lin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="7cd1e413-dcad-441f-a120-8fa6bf3674e6">
+          <SHORT-NAME>IPwComStEngRunDrv</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="07a5dfad-6a4b-4f8e-aeae-adce0ba5c328">
+              <SHORT-NAME>comStEngRunDrv</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="bf8b1493-96f0-41ee-a72c-1148f383dc53">
+              <SHORT-NAME>comStDrvVeh</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="95e8c0f9-9040-4890-bd59-63fe36f65826">
+          <SHORT-NAME>IPwIntegrationFemComKilometerstand</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="8177b6d5-c06b-49b9-96b4-bad25a057b67">
+              <SHORT-NAME>comMileKm</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt24</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="8e885fc7-3202-4c8b-9d6a-1676f6f882a9">
+          <SHORT-NAME>IPwComKlemmen</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="589d0b55-f7a9-4b7e-b4c9-f484e22d43ce">
+              <SHORT-NAME>comStKl</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="fe2524df-19eb-4628-a47a-da6378fa160e">
+              <SHORT-NAME>comStKlKeyVld</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="cfeb60c7-6890-4052-a246-bd3b2f0fc585">
+          <SHORT-NAME>IPwComKlemmenstatus</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="2732221d-127b-47dd-8832-dde40c393fc6">
+              <SHORT-NAME>comStKlR</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d1f00c61-4ee2-489e-b8f5-887f66d13f12">
+              <SHORT-NAME>comStKl15</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="8bb1014f-16f8-457c-8cd7-2efbab780d39">
+              <SHORT-NAME>comStKeyVld</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="185c5e10-64a6-43f3-91ab-f0b27ab06ae2">
+              <SHORT-NAME>comStKeyPlgd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="6d0a007b-918b-46fc-9c58-779739f043cf">
+          <SHORT-NAME>IPwComPositionFhBft</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="089a44f7-8d01-47b1-b8e3-38404b043257">
+              <SHORT-NAME>comPoWrgPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="dd7844cb-db21-44bd-ba4d-4131a88b3c93">
+              <SHORT-NAME>comStPoWrgPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c00df0e0-41f9-4581-ae50-1a79ff35129a">
+              <SHORT-NAME>comStErrWrgPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="71fa8b76-2e91-4ff9-b200-f0e018b086b2">
+              <SHORT-NAME>comStDrvWrgPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="3b826b79-ea5d-47f2-8a8e-d09c9be1d76c">
+          <SHORT-NAME>IPwIntegrationFemComPositionFhBfth</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="a29a8213-1922-4449-8366-7af19db86e2e">
+              <SHORT-NAME>comPoWrgPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="28c86e53-3935-4612-9ed5-81866905750a">
+              <SHORT-NAME>comStPoWrgPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="3fe306b8-6dbb-4135-9946-a28fd414f45a">
+              <SHORT-NAME>comStChislPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="422385d6-c663-44ea-8718-5ea9f15bfb9c">
+              <SHORT-NAME>comStErrWrgPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d6c7d94b-812f-4a33-9d27-38cd4cc5d85c">
+              <SHORT-NAME>comStDrvWrgPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="530a6fbc-a9ca-430f-8e79-41a5843f287d">
+          <SHORT-NAME>IPwComPositionFhFat</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="9f2df1b2-2032-4a1c-8296-296a12cf6c48">
+              <SHORT-NAME>comPoWrgDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e3aa5cc9-d486-4a91-89fb-e275eb794269">
+              <SHORT-NAME>comStPoWrgDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="433511c2-06af-4ae4-aea1-39b7b169071b">
+              <SHORT-NAME>comStErrWrgDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="df520f4f-5834-4f3c-9809-73a77ba6dfc7">
+              <SHORT-NAME>comStDrvWrgDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="504f438b-a2c5-4b04-9aed-e8955f103ee1">
+          <SHORT-NAME>IPwIntegrationFemComPositionFhFath</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="a4dcf3f1-1a30-4213-9759-a9077bbaffed">
+              <SHORT-NAME>comPoWrgDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="a0675c88-f497-452c-80d3-52a3035c1860">
+              <SHORT-NAME>comStPoWrgDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="92ea01f0-888d-40eb-9164-1c22200fa9d6">
+              <SHORT-NAME>comStChislDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c4ce4f23-33d7-4d9e-9e67-7d1b44f91e7c">
+              <SHORT-NAME>comStErrWrgDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="703f1613-876b-4672-a25c-95f98723fc0e">
+              <SHORT-NAME>comStDrvWrgDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="ece7503a-e2fa-4b1d-babe-ead7d5d08a4f">
+          <SHORT-NAME>IPwComPositionShd</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="0186cc01-f443-496f-99d3-3a20761b29cd">
+              <SHORT-NAME>comPoShd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d3a2e183-cdcf-48c9-a85a-61606a8bee8f">
+              <SHORT-NAME>comPoShdTlt</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="ca4b1684-ff8f-4349-83c8-00e0e2f9dd3b">
+              <SHORT-NAME>comPoSos</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c0cad57e-52dd-4781-a6e6-ccf6c515a726">
+              <SHORT-NAME>comPoSosTlt</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="782864d8-8a39-409f-876f-ec25a91dea31">
+              <SHORT-NAME>comStDrvShd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="9b7e52d2-3f81-448f-b592-740394b50f12">
+              <SHORT-NAME>comStDrvSos</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="60a3aa2b-e48a-4b9b-ba99-542225346e79">
+              <SHORT-NAME>comStErrShd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="a999bda5-390f-4854-8e39-2cc7816cff09">
+              <SHORT-NAME>comStErrSos</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="23f23e18-1e1b-469e-994f-8275682d10ef">
+              <SHORT-NAME>comStPoShd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c3a8bb07-99f8-46a7-8e61-3bd7908f77d7">
+              <SHORT-NAME>comStPoShdTlt</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="0843ac7b-f92c-4923-9382-b4a9d64cbafb">
+              <SHORT-NAME>comStPoSos</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="273dc3b0-5671-41a1-92c1-0e8f33ff6e66">
+              <SHORT-NAME>comStPoSosTlt</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="76a75aed-8cf9-4126-b0c5-01b222c42ce7">
+          <SHORT-NAME>IPwIntegrationFemComRelativzeit</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="87728d5b-ec9e-4dc4-a81c-5204dc21769f">
+              <SHORT-NAME>comTSecCouRel</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="44ca11e7-0e4b-489f-9bed-323ac7affbc4">
+          <SHORT-NAME>IPwComSbAbfrageFhDrdLin</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="7fa9abc9-2134-466d-8863-0c580149cfe2">
+              <SHORT-NAME>comStChoswExmiDdpdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="97fec50e-5ece-4589-939c-e14357f08e24">
+              <SHORT-NAME>comStPubuExmiFmirLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="48252d56-f70d-42ac-a6b6-416e3a765a02">
+              <SHORT-NAME>comStPubuExmiDdpdHoadLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="fdeed9d6-3f19-42c6-b760-78b2e46b1a72">
+              <SHORT-NAME>comStPubuExmiDdpdVeadLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="0f0aed2b-53d3-4728-be40-164f81efc3b5">
+              <SHORT-NAME>comStFnbut1DrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="8c61b85b-068c-4663-8b65-ce38ec19d7d8">
+              <SHORT-NAME>comStFnbut2DrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="0d43e61f-68a6-4908-9bc1-0b56dd89ed13">
+              <SHORT-NAME>comCtrWrgFlhDrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d231e6b3-8c47-4c28-bace-5803a7277974">
+              <SHORT-NAME>comCtrWrgRlhDrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="01c00b49-6e0c-4ac1-b3f7-746d0dddf24d">
+              <SHORT-NAME>comCtrWrgFrhDrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="c8224732-7b31-4539-9f7a-2fc268c298fa">
+              <SHORT-NAME>comCtrWrgRrhDrdLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="a2afd30d-1d5e-458b-8573-449581a0f55c">
+              <SHORT-NAME>comNodErrSwclDrLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="3c25b351-a039-4e59-8fcb-89f0adcd49d6">
+              <SHORT-NAME>comCtrWrgAllLin</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="de13f2f3-28a5-4ae8-9bee-2c48b6bc0d71">
+          <SHORT-NAME>IPwComStCabrf</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="675fd304-5ea2-4200-843f-a37ee5daf6aa">
+              <SHORT-NAME>comStSrcOpCabrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="5ef5e0b1-27fa-4c80-8d61-9ccb39dae4f3">
+              <SHORT-NAME>comStPoCabrfRetrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d700ceb9-0bca-43fb-8ae1-edabe68f5d11">
+              <SHORT-NAME>comStPoCabrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="65f1736d-7b21-4ba4-80fa-599e730126b6">
+              <SHORT-NAME>comStOpCabrf</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="89565ae0-218d-4130-b6c5-523ebf9c2c1e">
+          <SHORT-NAME>IPwComStatFunkschluessel</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="c44dd84c-d06e-4d0d-be75-2ebba5a2338c">
+              <SHORT-NAME>comOpKeyButUlok</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="4860dc08-e7c5-4094-b474-ce3ad98f45d0">
+              <SHORT-NAME>comOpKeyButLok</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="4efe48f6-cd5b-4347-b09a-aa200c4444a1">
+              <SHORT-NAME>comNoKeyPrslImme</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="7f61eaf9-1803-4fdb-85b0-26f742e217d7">
+              <SHORT-NAME>comStLokRqFfbLfsr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="cb007df7-3d35-4a9f-ae5a-cb7d7313bcb5">
+          <SHORT-NAME>IPwComStatZvKlappen</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="3f575f4d-9520-46f5-9209-ea895d861a12">
+              <SHORT-NAME>comStDswDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="ee42b378-a744-42f7-997c-558b0a40d1a6">
+              <SHORT-NAME>comStDswDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="64fb2034-80fd-4061-9e2d-3c2f8bfbf04a">
+              <SHORT-NAME>comStDswPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="a284ce05-036f-4c12-84aa-9fdab9eae9b3">
+              <SHORT-NAME>comStDswPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="9e7c5877-3849-4904-9daf-69e1d5c7aead">
+              <SHORT-NAME>comStClsy</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="2885794a-01af-4346-8446-2ef35a0ec0f6">
+          <SHORT-NAME>IPwComVVeh</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="aeef3c06-bd1c-43b3-a755-f071c12fd2e0">
+              <SHORT-NAME>comVVehCog</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e2b949ef-f842-4dcd-917a-c71af8289317">
+              <SHORT-NAME>comDvcoVeh</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="5ce075db-035b-4141-931e-65d6d50fe905">
+              <SHORT-NAME>comCrcVVeh</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="4339a8b0-972b-4c16-9c0a-3ad03e5bebcf">
+              <SHORT-NAME>comAlivVVeh</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="ffbcff9e-a6c1-4ad8-b741-60423b3380ca">
+          <SHORT-NAME>IPwDriverStateIntegrComp</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="53419379-2482-4d0b-9dd8-806dc3d71aed">
+              <SHORT-NAME>isReversing</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="f3d22ef5-c9a6-4ca1-94c5-cc639eec74b9">
+              <SHORT-NAME>thermo90</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d14a77e6-3b06-48c9-a9fc-c4f7432738b7">
+              <SHORT-NAME>hallStatus</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="4c0a7c59-a34d-463b-82b4-f62d9534ba73">
+              <SHORT-NAME>openRelayStatus</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="924a7c0b-7c90-4554-96de-c4de8b104300">
+              <SHORT-NAME>closeRelayStatus</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="f86f2271-18bb-4eae-a9b8-cbe5bf1fb476">
+              <SHORT-NAME>windowState</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="680f53db-ce28-43cf-8eab-d5ea526d430c">
+              <SHORT-NAME>windowMovement</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="9c802ff3-8f12-4a8f-9197-0ec740dc87c0">
+              <SHORT-NAME>init_nr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="8871bc07-8a7a-496d-8812-5cfc4930f4d5">
+              <SHORT-NAME>bewegung_nr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e26bbe46-ad25-4d3f-b170-04fc7aab9896">
+              <SHORT-NAME>position_nr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="9a8c8384-65bf-44c2-890f-b7eaa459f482">
+              <SHORT-NAME>position_hall_wert</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/SInt16</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="32f2f33f-09cf-4643-8e26-5201ed929b44">
+              <SHORT-NAME>position_hall_max_wert</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/SInt16</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e23c9a4f-bb64-4bcf-b588-7584504cb895">
+              <SHORT-NAME>position_mm_wert</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/SInt16</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="1c93d79d-1a9c-4df2-9078-790675ae14e1">
+              <SHORT-NAME>position_mm_max_wert</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/SInt16</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="386ab50a-2193-4ae6-90e1-f2b772284dd4">
+              <SHORT-NAME>position_prozent_wert</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="1afc4ce7-710e-48c2-9fd3-e50dd8db72c3">
+              <SHORT-NAME>lage_nr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="063f3e1d-775b-4bc5-8ff4-110bb1a324a5">
+          <SHORT-NAME>IPwIntegrationIGR</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="f178df59-8cd4-4152-94b8-89ae34f5bd11">
+              <SHORT-NAME>IGR</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="275a9540-6168-4821-9dc8-5af583f41e22">
+          <SHORT-NAME>IPwIntegrationKeyRange</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="ef344dd0-d693-4f13-aa4b-c2d8a8ab1832">
+              <SHORT-NAME>cahLfPingDebounced</SHORT-NAME>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="0e61e24c-7f9e-4f7d-a2ab-dfdae2f25a1c">
+          <SHORT-NAME>IPwSwitchPsd</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="0009a4d7-3915-42a2-b8a8-205302a03e26">
+              <SHORT-NAME>ctrWrgPsdPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="eb49229b-9a15-4022-abf4-1291f614e32b">
+          <SHORT-NAME>IPwSwitchesDrd</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="2d464736-0393-464a-9d24-35f1a27deacb">
+              <SHORT-NAME>ctrWrgDrdDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="2602d534-d680-46ec-9c44-6539bb7b8d7e">
+              <SHORT-NAME>ctrWrgDvdrDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="e5c68ac9-4473-4370-aca7-e3e395c68ff0">
+              <SHORT-NAME>ctrWrgPsdDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="864880b2-b7e4-42fc-aed6-fa302181e2f2">
+              <SHORT-NAME>ctrWrgPsdrDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt3</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="d214cb5f-b62f-439d-8cf0-89e16b26e457">
+          <SHORT-NAME>IPwRxTxNotification</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="bb2b8b79-4dd9-4630-adc9-d23de2802334">
+              <SHORT-NAME>msgRxVVeh</SHORT-NAME>
+              <ARGUMENTS/>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="261591cc-4f9c-4668-b039-d3ac4c8ebef8">
+          <SHORT-NAME>IPwComEKSDebug</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="03eb49e1-4023-4aa2-ae98-0b62a7a40c12">
+              <SHORT-NAME>com0x79cDebugEKS</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="e1f93444-6f7e-4785-8979-07e960ec7798">
+                  <SHORT-NAME>eksInfo</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="05fcc01b-9a42-4fce-beda-e83d7d28b2d5">
+          <SHORT-NAME>IPwComDebugData</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="7fb5024d-480f-47da-802d-2324a4970803">
+              <SHORT-NAME>sendDebugData</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="b7127146-f310-4c14-a3cc-882e037de125">
+                  <SHORT-NAME>debugData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="7df23868-a3fa-48db-85af-a12e63d630c8">
+          <SHORT-NAME>ISwcPwIntegrationFemDiag</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="12b112eb-3a82-4424-a028-82f869266fa1">
+              <SHORT-NAME>diagJobReadFhFaTaster</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="4f0e5da1-8d78-4c99-a096-5dec52f6b359">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="cd1231c7-02d8-46ad-ad3a-aaa7c11de344">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="0abe8b20-4edd-49b9-b5ce-7e15d17347e7">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray9</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="d012200f-c6f1-40cd-bee8-3e24716e7d3a">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="7177c6e7-a02a-4c56-9112-8e4a1d9c46a4">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="28af40e8-0c98-4c5f-8bda-2aa541665565">
+              <SHORT-NAME>diagJobReadFhBfTaster</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="e39dcd7d-dd4d-4062-bfbb-bb9af7cdd093">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="8d7e0ea0-efd3-43b2-be12-8d920e3b7543">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="d3e70d23-fe0d-4e3a-b3ae-a0f6dee510cd">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="c0177c67-c659-416e-b39a-7e07a53f2189">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="48897948-a79e-4210-b9fb-5301cd5722a1">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="14b6060d-a2b5-4ff8-b021-d5a2217ebfcc">
+              <SHORT-NAME>diagJobReadFhKisiTaster</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="291708d0-fd41-43e6-bec8-96a59639b2a8">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="423958fe-ef11-4291-b158-7ba4f68a344e">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="27a10c6b-6e96-4c5a-9609-8c2aae7b76a4">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray2</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="474e788b-15ea-40ac-b923-22bd9d865d06">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="4654b587-327d-4c91-bcb1-c19a5da7f192">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ef4dd42a-4b1c-4487-b176-1f6f54a56387">
+              <SHORT-NAME>diagJobReadFhKisiLed</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="d661b83f-d0fd-45da-a5c3-32f7478b7aee">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="26a473be-9a1a-4684-8c36-0a805c7905d2">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="46d59353-d58a-4b20-b92f-4dedb02ca5d8">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray2</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="fbc136fd-24e5-4dc7-94d3-941b0fc4ff0a">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="428d9810-d607-435d-aae6-8fdb8058350c">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="3c4cdbb8-5870-4e04-82cd-2b8a42ea8971">
+              <SHORT-NAME>diagJobReadFhFaBewegung</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="f70c9399-a403-4aa0-9037-ac3e23c7d49b">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="4f9d6298-1e1b-45eb-be2f-d8f8a4cc7e29">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ca237436-d18e-4c0a-ad73-3141b518b614">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray19</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ceda8573-bfb0-4371-b441-e95772ddee50">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="f8a9dde7-1d5e-47c8-97b1-ba41bbea42bf">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="c3d9a0e8-72f8-45ef-8943-3e95c28c865b">
+              <SHORT-NAME>diagJobReadFhBfBewegung</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="28da6bb5-1f0b-427c-a62c-db336204e89c">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="6d7d6efe-7c6b-473f-8de6-21cbba6ac2a4">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="5ca1f090-961f-46ea-ba0c-289bda0714a6">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray19</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="c6f1375f-3a8e-470f-b32c-72c7c7615f1f">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="7e6cff6d-ff73-4ea8-9a15-39a286f6f4cd">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="7564df44-8dfe-41a4-a7d2-2bd1137d58c8">
+              <SHORT-NAME>diagJobReadFhKlemmenspannung30a</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="12598e50-d5a9-4fb6-a8e7-2a3fa9a6636c">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="c8f21dd9-a821-473f-9512-d4be5fdd7c55">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="46d1cbab-3a50-4eeb-bfd2-ea710f5a0c65">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="d54d3b8d-4e65-4994-b94b-5b9f0ca220a6">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="07586b62-f0ba-4573-9009-80b7e591fcf6">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ac0477d5-a908-4d28-9cad-7960dc8f27ac">
+              <SHORT-NAME>diagJobReadFhKlemmenspannung30b</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="d4a65894-563f-48f8-b546-f6ad3f07b2c7">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="6077d5c3-3b5f-43af-946f-00627cab82e4">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ef61be4d-c4d2-4062-b234-b21dc63b801b">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="82c3762d-6230-4495-b80d-d0120b356ef6">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ff7e37d4-ad72-4c8c-9fe9-d704b4f58826">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="019dc4e6-bdb3-426c-b22a-82f33fdd097a">
+              <SHORT-NAME>diagJobReadFhBfRelais</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="444be422-bebb-4178-8389-faa79c45f9d5">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="93d0cc0c-00ce-4619-92fe-64d247847da2">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="a33fbd18-8368-40a3-95d6-a255d631cf2a">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="3852c348-b4ac-45fc-a5d2-cd84d844869f">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="b9d3dab7-8245-45bc-91c4-51ada673c59f">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="c0a36665-3a50-4633-9cff-e6caf55e885f">
+              <SHORT-NAME>diagJobReadFhFaHallsensoren</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="5db42b75-e5f7-41fe-bb71-e1229f0460a3">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="1dc21e06-9ef6-4688-9bc1-498847ffc65a">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="006d2ff8-4b00-4923-a047-025d4f3e5245">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray6</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ba267bdb-e82e-471a-9a96-571f1851381e">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ea7ef071-30f4-47d0-b0e2-37c7edb27c14">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="b9213b45-6081-4368-843a-e3822a19a3ed">
+              <SHORT-NAME>diagJobReadFhFaRelais</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="59189d6f-4d64-4c9f-982c-25857277e58c">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="bada6efe-2075-46ae-a75e-d032682e3ad4">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="96186dcc-6839-422c-8ebc-07a0a7dd9320">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="1ab03c39-5689-4bfc-a1d5-7ff28b37602e">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="df1a7dd2-2448-4bfc-955d-414fb11e25e4">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="89f49861-b43b-4272-9939-47ddf09d9c40">
+              <SHORT-NAME>diagJobReadFhBfHallsensoren</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="b3a0837a-f1a7-4c6a-8ae8-b56ffa65ec75">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="f137b12d-4518-4634-a615-e26776751a4d">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="e50c9ecd-ac3d-4482-8420-17080895c5de">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray6</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="3640b8ab-12f7-42b4-a21f-ed261422a9ce">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="b5154b8a-8e84-4970-8f07-9a2df530d0ef">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="f0ea18eb-d4a0-4603-a2a5-5358ec302be2">
+              <SHORT-NAME>diagJobStartRoutineFhTasterSteuern</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="8795d688-a1a6-4ff8-9983-b12e18ce9cdb">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray4</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="bf39f4f2-2616-4573-8e1e-c4c2c879aab7">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="51682c38-b42d-4e2e-995a-eb66e9b57edb">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="43360b36-d3c3-42e1-92fb-baa0b323c138">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="bfeb90b8-51ea-4710-a66e-68ca93ac1e40">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ce8d3c4a-0765-4aa3-80d3-17ed769a0b44">
+              <SHORT-NAME>diagJobStopRoutineFhTasterSteuern</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="a380ac44-4dcd-41ab-84a7-50d076105cff">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="e5bbbde3-32dd-4581-b119-f215e209a122">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="92d8ed72-0129-4d70-969f-6279343357c0">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="117d0272-42da-4011-83b7-147904a7ecda">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="cf7f50d0-2553-463f-991c-cef41ee7a83f">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="61c5fa64-85d8-4d0b-9ba1-ba19f5ce02fc">
+              <SHORT-NAME>diagJobRequestResultFhTasterSteuern</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="dac4acec-5ffa-4762-b500-137345b0f3e3">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="79aa4750-4b4c-4f92-ab5c-7bfce0337f7b">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="b65380ae-9bff-4ff7-b400-cea3ea54ac50">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="cb468ed4-a868-4b63-8df9-2c95238ffeb9">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="ff6d1c03-bc55-4b43-9713-82c857a1ac3d">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="4edcb4fb-d983-4f14-82ff-90828d6ae4cd">
+              <SHORT-NAME>diagJobIOControlReturnControlEcuFhHallVersorgung</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="bb1289f8-7286-4d43-a83e-192d976c15e7">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="7e1e8d0c-70fc-4646-9221-d52b2e68f3e5">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="bc53f15e-1dc1-4fff-85ef-6bfc5a55e32c">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="4bb2b965-b3f7-49f3-9126-9eccb7b52d15">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="a2de4c96-5a11-4655-a60d-0a498ad7c98e">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="79f230cd-6da5-4cba-af1d-a9c374221497">
+              <SHORT-NAME>diagJobIOControlShortTimeAdjustFhHallVersorgung</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="134eeedd-7367-4d08-8052-d3a7323a3c85">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray2</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="e86fc584-b849-4de4-84a4-ec347e180188">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="27d6865f-dac4-4784-ad5d-e4609f73420a">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray2</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="f46e09b2-0f9f-436f-a392-9e7ce68858ac">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="20b2ffb8-f3db-4afe-a2b1-89fbcc6d0f23">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="121a7574-4ffc-4ee1-aa6d-f722c7969975">
+              <SHORT-NAME>diagJobWriteFhKisiTaster</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="bb323a58-5596-4f88-a89a-d2cc82e8ffe0">
+                  <SHORT-NAME>requestData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray2</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="a3a8cbf2-7d6c-44b0-823d-161b6d51ad05">
+                  <SHORT-NAME>requestLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="d8c2ebdf-0a54-4fca-a542-8f7cc03d5187">
+                  <SHORT-NAME>responseData</SHORT-NAME>
+                  <TYPE-TREF DEST="ARRAY-TYPE">/autosar_types/ByteArray1</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="478239a6-04fa-4b8d-adac-c79f3edf6250">
+                  <SHORT-NAME>responseLength</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+                <ARGUMENT-PROTOTYPE UUID="f60325b7-687f-4e30-8372-ea4de1d71120">
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="732350c6-5b56-4b8b-9087-b6513a6992cb">
+          <SHORT-NAME>IPwIntegrationFemIoAdapterInCallback</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="e8aca565-5305-4909-be4a-d0d2e7da830a">
+              <SHORT-NAME>icHallADrd</SHORT-NAME>
+              <ARGUMENTS/>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="39a7a726-b9ea-4ed3-95c9-cb4d79015d46">
+              <SHORT-NAME>icHallBDrd</SHORT-NAME>
+              <ARGUMENTS/>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ee8f7f20-c65b-40ea-857e-fe3eda374139">
+              <SHORT-NAME>icHallAPsd</SHORT-NAME>
+              <ARGUMENTS/>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="8ae73adc-354d-497c-82f6-4dc4b469c9a8">
+              <SHORT-NAME>icHallBPsd</SHORT-NAME>
+              <ARGUMENTS/>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="def6a573-f6b5-4585-aca8-6a83acbdfcfa">
+          <SHORT-NAME>IPwIntegrationFemIoAdapterIn</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="2944e57b-6c3b-4b67-b2d7-d157386eacb3">
+              <SHORT-NAME>diSigAnWlDrdincrHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="17f9aa8d-3cee-420d-a7e5-7eedc9ad2fae">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="e6c54ba1-6b3c-4b91-a64b-dda71f0fff2f">
+              <SHORT-NAME>diSigAnWlDrdincrHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="5830acd0-1191-4e0c-a65c-45554cb86113">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="1c424c96-6f7c-4902-9ecc-f6207e2cbee4">
+              <SHORT-NAME>diSigAnWlPsdincrHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="cccd85f7-2e04-4332-a7df-663dd1be0b71">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ba1d2d0f-bdae-4519-9026-9f699e804f7c">
+              <SHORT-NAME>diSigAnWlPsdincrHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="8ac7769f-0008-4978-b4c5-3135db982153">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="e9218e8e-876a-4163-9d46-f35e16e13246">
+              <SHORT-NAME>aiSigAnWlDrdincHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="9b2daeae-7379-468e-8580-35eca74f0e31">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="18f89c11-4f00-4862-975d-2c909ca4469b">
+              <SHORT-NAME>aiSigAnWlDrdincHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="fed3c7c5-68b3-435d-8223-bd1a62a1530c">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="31b5e465-74f1-473d-b13b-59a8be434ab5">
+              <SHORT-NAME>aiSigAnWlPsdincHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="83053e85-0350-4ae8-8e6b-375b01ce511f">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="83f2fecd-61c7-40ff-b8f4-f819ddccf092">
+              <SHORT-NAME>aiSigAnWlPsdincHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="b7044e11-3d10-4b7e-b124-a23200870619">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="7ebdb6a7-01f7-44fd-b549-844fac6c3eca">
+              <SHORT-NAME>aiSigAnPowWindPsd</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="05824379-d9e0-46c7-b15b-9bdaca02a5cc">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="7e9ff94a-95ba-4a06-ba4f-fe30caf7f58a">
+              <SHORT-NAME>aiSigDiRelaystateDrd</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="6cd1e7a0-65d2-4b65-94a9-36b6f2a551fa">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="8b5700dc-eb01-44ce-8d6d-cf0f5eae1d7c">
+              <SHORT-NAME>aiSigDiRelaystatePsd</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="db6f1512-fc42-4268-ab8f-6f15cd508900">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt8</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="d3a35c90-319f-4051-b491-b6a2ed2358e6">
+              <SHORT-NAME>aiSigDiRelayFeedBackDrdUp</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="cda8aad2-b5bd-4191-96b6-a4bcb97e6275">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="0f5e0f5f-02ab-404a-afbd-b3493cd40b85">
+              <SHORT-NAME>aiSigDiRelayFeedBackDrdDown</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="3d456caf-867d-4ce9-947f-62eee3d2de47">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="13ed79f1-5113-4c2b-bfc4-d983fb2c4fc2">
+              <SHORT-NAME>aiSigDiRelayFeedBackPsdUp</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="db153f82-9fbd-4798-9d45-c3b3307f7146">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="a43923e4-0101-4a67-a658-63b184b8cdfe">
+              <SHORT-NAME>aiSigDiRelayFeedBackPsdDown</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="50c2f941-0fce-4499-834b-e54b770ff8ad">
+                  <SHORT-NAME>diValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="ca9a17d8-9841-4c0a-ac7a-2ac87454c080">
+              <SHORT-NAME>aiTerm30L1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="046a23fb-1578-4196-a936-ab298148f4f0">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="eb12ef72-088d-45f5-93e8-8bbae508b05d">
+              <SHORT-NAME>aiTerm30L2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="7682d3ef-1875-48db-8e8c-65e8da75231d">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt16</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="385e75c1-1d57-410f-ac0a-2f631377b9bb">
+              <SHORT-NAME>aiSigPeriodTimeDrdHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="965ade7d-7247-4bca-8148-504e31148c3c">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="a5c70702-503a-4068-be89-8562caa304e4">
+              <SHORT-NAME>aiSigPeriodTimeDrdHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="9fb5d3f1-b17f-4d7b-9159-4d0879263cb0">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="dcd41f9d-7fec-454f-b03c-9d01fca9860a">
+              <SHORT-NAME>aiSigPeriodTimePsdHall1</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="0ea3a58f-d938-45f8-b800-27490dc1df13">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="d8627e58-ce7f-4ef8-80a5-178a46cdb189">
+              <SHORT-NAME>aiSigPeriodTimePsdHall2</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="5fdea51b-b86a-4187-8221-ac0c906015df">
+                  <SHORT-NAME>aiValue</SHORT-NAME>
+                  <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE UUID="04f40ee7-cde0-4673-a930-bf75ce4b907f">
+          <SHORT-NAME>IPwIntegrationFemIoAdapterOut</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <OPERATION-PROTOTYPE UUID="b8dc2d71-63e6-43e7-83f6-c8e0b880649e">
+              <SHORT-NAME>doWlEsaHallOn</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="17beb111-b6cb-4697-bdd4-f5b2c2eb8bb7">
+                  <SHORT-NAME>doValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="9d0d17a6-90c8-4c8a-9434-9692a8653522">
+              <SHORT-NAME>doPwrWindowLifterDrdUp</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="498da891-2a19-44e2-abd1-3a93610b9ce0">
+                  <SHORT-NAME>doValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="eb7621b5-e21a-4b7a-a5a5-068bf8fb5f27">
+              <SHORT-NAME>doPwrWindowLifterDrdDown</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="3000ad7c-fbab-43af-921c-6ee9b9c4feb1">
+                  <SHORT-NAME>doValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="162e7e13-1202-4e4a-8e25-5bfac9c6bd7c">
+              <SHORT-NAME>doPwrWindowLifterPsdUp</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="dc21055b-882e-4c3a-8a38-5c6a79e72f77">
+                  <SHORT-NAME>doValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+            <OPERATION-PROTOTYPE UUID="93c11a64-f09d-4baf-8081-bd29f30379e0">
+              <SHORT-NAME>doPwrWindowLifterPsdDown</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-PROTOTYPE UUID="717118c6-cb37-4577-a6d0-0e9dd59dc01c">
+                  <SHORT-NAME>doValue</SHORT-NAME>
+                  <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS/>
+            </OPERATION-PROTOTYPE>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS/>
+        </CLIENT-SERVER-INTERFACE>
+        <CALPRM-INTERFACE UUID="00b90c5f-05d5-4eb7-a43f-cf370dbe076b">
+          <SHORT-NAME>IPwApplIntegrationCalprm</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <CALPRM-ELEMENTS>
+            <CALPRM-ELEMENT-PROTOTYPE UUID="e5acc135-9e74-4d36-ba56-705e37544ecc">
+              <SHORT-NAME>cpFensterheberElektrisch</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">@sem: prefix: FENSTERHEBER_ELEKTRISCH enum { 1=default 1=aktiv 0=nicht_aktiv }</L-2>
+              </DESC>
+              <SW-DATA-DEF-PROPS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/interfaces/cpFensterheberElektrisch_Semantic</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-TREF DEST="BOOLEAN-TYPE">/autosar_types/Boolean</TYPE-TREF>
+            </CALPRM-ELEMENT-PROTOTYPE>
+            <CALPRM-ELEMENT-PROTOTYPE UUID="1381567e-054e-408d-a067-435f324d12e0">
+              <SHORT-NAME>cpFhCcMeldung</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">@sem: prefix: FH_CC_MELDUNG enum { 4=default 1=ccm_denorm 2=ccm_panic 3=ccm_panic_denorm 0=keine_ccm }</L-2>
+              </DESC>
+              <SW-DATA-DEF-PROPS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/interfaces/cpFhCcMeldung_Semantic</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+            </CALPRM-ELEMENT-PROTOTYPE>
+          </CALPRM-ELEMENTS>
+        </CALPRM-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="2221b5a7-7576-4299-ace0-e77f5306e8ee">
+          <SHORT-NAME>IPwKlemmen</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="7ae3d4db-9238-43dd-ad2b-34ecdea85ea0">
+              <SHORT-NAME>comStKl</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="6d72e66f-8af4-4543-8180-99b76c5bf48f">
+              <SHORT-NAME>comStKlKeyVld</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <SENDER-RECEIVER-INTERFACE UUID="d1e36da7-e54c-4429-b7b0-3c7309c5bb8f">
+          <SHORT-NAME>IPwStatZvKlappen</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <DATA-ELEMENTS>
+            <DATA-ELEMENT-PROTOTYPE UUID="993ae068-6ef5-4428-a3ee-ce92d7778a84">
+              <SHORT-NAME>comStDswDrd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="d54e9e3a-80a4-49b1-91c1-8cfa1a85c694">
+              <SHORT-NAME>comStDswDvdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="44bbb6aa-7f20-4187-8b5d-f9244d26f9e9">
+              <SHORT-NAME>comStDswPsd</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="236da6e6-e4d0-4b10-a38b-368678c19d31">
+              <SHORT-NAME>comStDswPsdr</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt2</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+            <DATA-ELEMENT-PROTOTYPE UUID="3a43eeb0-2807-437c-b01c-6ee4dac44e2f">
+              <SHORT-NAME>comStClsy</SHORT-NAME>
+              <TYPE-TREF DEST="INTEGER-TYPE">/autosar_types/UInt4</TYPE-TREF>
+              <IS-QUEUED>false</IS-QUEUED>
+            </DATA-ELEMENT-PROTOTYPE>
+          </DATA-ELEMENTS>
+          <MODE-GROUPS/>
+        </SENDER-RECEIVER-INTERFACE>
+        <COMPU-METHOD UUID="9827f4a9-2a45-4b90-98f5-9129aac25e1f">
+          <SHORT-NAME>cpFensterheberElektrisch_Semantic</SHORT-NAME>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FENSTERHEBER_ELEKTRISCH_default</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FENSTERHEBER_ELEKTRISCH_aktiv</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FENSTERHEBER_ELEKTRISCH_nicht_aktiv</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+        <COMPU-METHOD UUID="f60d17c8-af58-433c-9414-a02e42b8f103">
+          <SHORT-NAME>cpFhCcMeldung_Semantic</SHORT-NAME>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FH_CC_MELDUNG_default</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FH_CC_MELDUNG_ccm_denorm</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FH_CC_MELDUNG_ccm_panic</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FH_CC_MELDUNG_ccm_panic_denorm</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT XMLSPACE="preserve">FH_CC_MELDUNG_keine_ccm</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+      </ELEMENTS>
+      <SUB-PACKAGES/>
+    </AR-PACKAGE>
+  </TOP-LEVEL-PACKAGES>
+</AUTOSAR>

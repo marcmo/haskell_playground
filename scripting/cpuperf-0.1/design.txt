@@ -1,0 +1,588 @@
+Practical Haskell: shell scripting with error handling and privilege separation
+
+Shell scripts are often a quick, dirty way to get the job done. You glue
+together external tools, maybe do a little error checking and process
+all data as strings. 
+
+This is great for some very simple problems but as requirements change and more
+is demanded from the code shell scripts become unwieldy and fragile. When they
+get large, they become slow and difficult to maintain. If you need to write
+robust code then shell is not the way to go.
+
+At the other extreme we have Haskell. Haskell is about as far from shell
+programming as you can get: its full of abstractions, its designed for robust
+error and exception handling, is strongly statically typed (you'd be shot if
+you represented all data as strings). Fortunately, it is also rather concise,
+like shell code.
+
+So it makes sense then for Haskell to be used in a number of ``scripting''
+situations where robustness and correctness are important. For example, large,
+critical tools, such as the package management infrastructure in the Linspire
+linux distro, are written in Haskell.
+
+This article looks at how to use Haskell for a scripting task. 
+By refining the semantics of the problem domain, employing abstract, we produce
+shorter and more robust code. Finally, as a highlight, we'll use type checking
+to statically separate code that requires root privileges from user code.
+
+
+== The spec ==
+
+I have a variable frequency cpu in my laptop. The frequency of the clock life
+is greatly extended, and the machine stays a lot cooler. At the highest level,
+my code runs a faster.
+
+There exist tools for all common operating systems to automatically
+scale up and down the clock based on load. However, I usually don't care
+about scaling -- I either explicitly want the clock all the way up, or all
+the way down. In particular, when I do benchmarking I want to keep the
+cpu clocked up all the way.  
+
+So we'll develop a simple program that acts as a toggle, flipping the cpu speed
+up or down, and printing some strings about the current state. It should behave
+like this:
+
+    $ cpuperf
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+    $ cpuperf 
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+== Operating details ==
+
+First let's look at how we'd typically do this in the shell.
+
+I use the OpenBSD operating system. Rather than using a /proc filesystem as on
+linux, tuning kernel variables in OpenBSD is done via sysctls. The userland
+sysctl program let's you get or set kernel values:
+
+For example, the OS type:
+
+    $ sysctl kern.ostype
+    kern.ostype=OpenBSD
+
+The current clock speed:
+
+    $ sysctl hw.cpuspeed
+    hw.cpuspeed=600
+
+The current performance level (between 0 and 100):
+
+    $ sysctl hw.setperf 
+    hw.setperf=0
+
+We'll use these latter two sysctls to tweak the clock speed. Note that to set a
+sysctl value we need root privileges (via sudo).
+
+== An implementation in shell ==
+
+Implementing the specification in shell:
+
+    #!/bin/sh
+
+    s=`sysctl hw.setperf`
+    old=`echo $s | sed 's/.*=//'`
+    if [ "100" = $old ] ; then
+        new=0
+    else
+        new=100
+    fi
+    sudo sysctl -w hw.setperf=$new > /dev/null
+    printf "cpu: %d -> %d\n" $old $new
+
+    speed=`sysctl hw.cpuspeed`
+    clock=`echo $speed | sed 's/.*=//'`
+    clock=`bc -l -e "$clock / 1000" -e quit`
+    printf "clock: %0.1f Ghz\n" $clock
+
+Note that we assume you've made the sysctl command accessible through sudo.
+For example:
+
+    $ visudo
+    ...
+    dons mymachine = NOPASSWD: /sbin/sysctl -w hw.setperf=0
+    dons mymachine = NOPASSWD: /sbin/sysctl -w hw.setperf=100
+    ...
+
+The script is short and does no error handling. Does it work?
+
+    $ sh naive.sh
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+    $ sh naive.sh
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+    $ sh naive.sh
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+Great! The performance is toggled between 0 and 100, clocking up and down the
+cpu. Some interesting things to note;
+
+    * we use regular expressions for parsing
+    * we don't check for failure
+    * strings are treated as numbers
+    * floating point math is a little hard
+    * we take root privileges in the middle of the code
+
+== An Haskell translation ==
+
+We can directly translate this code into Haskell:
+
+    import Text.Printf
+    import Process
+
+    main :: IO ()
+    main = do
+        s <- run "sysctl hw.setperf"
+        let old = clean s
+            new = if old == 100 then 0 else 100 :: Integer
+        run $ "sudo sysctl -w hw.setperf=" ++ show new
+        printf "cpu: %d -> %d\n" old new
+
+        s <- run "sysctl hw.cpuspeed"
+        let clock = fromIntegral (clean s) / 1000
+        printf "clock: %f Ghz\n" (clock :: Double)
+
+      where
+        clean :: String -> Integer
+        clean = read . init . tail . dropWhile (/='=')
+
+We replace the regular expression with some list processing, failure is
+translated to unhandled exceptions, IO is interleaved with pure actions (like
+the math), just as in shell. One difference is that we explicitly treat strings
+as Integers and Doubles.
+
+Running the code in the bytecode interpreter:
+
+    $ runhaskell naive.hs
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+    $ runhaskell naive.hs
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+Of course, this being Haskell, we can compile to native code:
+
+    $ ghc -O --make naive.hs -o cpuperf
+    [1 of 2] Compiling Process          ( Process.hs, Process.o )
+    [2 of 2] Compiling Main             ( naive.hs, naive.o )
+    Linking cpuperf ...
+
+    $ ./cpuperf
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+Which does run quite a bit faster than bytecode (and faster than the sh code).
+This code uses the <a
+href="http://www.cse.unsw.edu.au/~dons/code/cpuperf/Process.hs">Process</a> module, a
+ small wrapper over System.Process.
+
+== Doing a better job ==
+
+This is all very nice, but the code feels a bit icky. There's something
+unsatisfying: we haven't really captured the sysctl abstraction at all, so
+there's no easy reuse of this code for other purposes. Neither have we looked
+at error handling, and finally, we've played fast and loose with sudo.  In a
+larger application, we'd want to be far more careful about taking root
+privileges.
+
+== Domain specific shell code ==
+
+The first thing to clean this code up is to notice that the sysctl values
+behave like mutable boxes who's contents change (these are known as 'variables'
+in some cultures). A nice interface to mutable boxes is the get/set/modify api,
+which goes something like this:
+
+    get    :: box -> m a
+    set    :: box -> a -> m ()
+    modify :: box -> (a -> a) -> m (a,a)
+
+The 'get' function retrieves a value from a mutable box. The set function
+writes a new value into one. The most convenient function is `modify', a higher
+order function which takes a box, and a function modifying the contents, and
+applies that to the current contents, mutating the contents. It returns the old
+and new values of the box.
+
+Since sysctls act as mutable boxes of integers keyed by strings names our
+abstract api can be specified concretely as:
+
+    get    :: String -> IO Integer
+    set    :: String -> Integer -> Priv ()
+    modify :: String -> (Integer -> Integer) -> IO (Integer, Integer)
+
+We can implement the semantics of the 'sysctl' command as a small domain
+specific set of functions in Haskell:
+
+    get s = do 
+        v <- run ("sysctl " ++ s)
+        readM (parse v)
+      where
+        parse = tail . dropWhile (/= '=') . init
+
+    set s v = run $ printf "sysctl -w %s=%s" s (show v)
+
+and our nice 'modify' function combines the two:
+
+    modify s f = do
+        v <- get s
+        let u = f v
+        set s u
+        return (v,u)
+
+This let's us simplify the main function:
+
+    main = do
+        (old,new) <- modify "hw.setperf" toggle
+        clock     <- get "hw.cpuspeed"
+        printf "cpu: %d -> %d\n" old new
+        printf "clock: %f Ghz\n" (fromIntegral clock / 1000 :: Double)
+
+    toggle v = if v == 100 then 0 else 100
+
+Which is really pretty nice. By getting closer to the semantics of the problem,
+we find the right api, and the code becomes simpler and cleaner.
+So our code now more closely matches the spec of:
+
+    * modify the hw.setperf value based on its current value
+    * print the current cpu speed
+
+== Improving error handling ==
+
+In the current code exceptions aren't caught (if they're noticed at all).
+We can introduce a bug to see the problem:
+
+    parse = read -- . init . tail . dropWhile (/='=') 
+
+Now the Haskell code dies with the unhelpful error message:
+
+    $ cpuperf
+    *** Exception: user error (Prelude.read: no parse)
+
+We really should handle the possibility of 'read' failing. Currently, any error
+results in a call to the default ioError action in the IO monad.
+
+However, this being Haskell, we can implement our own error monad to provide
+custom error handling. This situation is exactly what the <a
+href="http://darcs.haskell.org/packages/mtl/Control/Monad/Error.hs">ErrorT
+monad transformer</a>.  was designed for. So how to use it?
+
+The first step is to replace read with a version lifted into a generic error
+monad, MonadError:
+
+    readM :: (MonadError String m, Read a) => String -> m a
+    readM s | [x] <- parse = return x
+            | otherwise    = throwError $ "Failed parse: " ++ show s
+        where
+            parse = [x | (x,t) <- reads s]
+
+Now should a parse fail it will call the 'throwError' function in whatever
+monad we happen to be using -- the code is polymorphic in its monad type.
+For particular types, we can see how throwError is defined:
+
+    instance MonadError IOError IO where
+        throwError = ioError
+
+    instance (Error e) => MonadError e (Either e) where
+        throwError = Left
+
+That is, for IO, throwError corresponds to a normal io error (which will throw
+an exception). If we're in the Either monad, instead our result will be marked
+as an error (with no exception thrown).
+
+But, even with this nice 'read' function, we still have a problem checking errors.
+Functions like 'get' or 'set' might fail. One way to handle errors like this is 
+to check every functions' result (this style is encouraged in some cultures).
+We can tag any error and then check the result after each function call using
+the Either type:
+
+    data Either a b = Left a | Right b
+
+A value of 'Right x' is a good value, anything of the form 'Left e' is an error.
+Assuming we then wrap 'get' and 'set' to return 'Left's in the case of errors, we can
+obfuscate our 'modify' function with error handling boilerplate like so:
+
+    modify :: String -> (Integer -> Integer) -> IO (Either String (Integer,Integer))
+    modify s f = do
+        ev <- get s
+        case ev of
+            Left e -> return (Left e)
+            Right v -> do
+                let u = f v
+                ev <- set s u
+                case ev of
+                    Left e -> return (Left e)
+                    Right _ -> return (v,u)
+
+Urgh .. boilerplate! Note the common pattern: after each evaluation step: we
+perform a particular check, and then optionally propagate results further down.
+
+All good Haskellers reading should immediately recognise the pattern:
+
+    * we have a particular operation we need to run between each step of our code
+
+This kind of boilerplate can be abstracted perfectly with a monad (of course).
+
+== Scrap your error handling boilerplate ==
+
+But which monad? Well, Either is itself an monad: the Error monad:
+
+    instance (Error e) => Monad (Either e) where
+        return        = Right
+        Left  l >>= _ = Left l
+        Right r >>= k = k r
+
+If you recall from the dozens of other monad tutorials out there, a monad gives 
+us a programmable ';' (the semicolon statement terminator from the imperative
+world). With a custom monad we can specify precisely what happens at the end of
+each statement in our code.
+
+in this case, we want any 'Left' value to immediately terminate the
+computation, and any 'Right' value to produce a result we feed to the rest of
+the code. Since we need to use IO as well, we'll actually need an <a
+href="http://darcs.haskell.org/packages/mtl/Control/Monad/Error.hs">ErrorT
+monad transformer</a>, which wraps an underlying monad with error handling
+capabilities:
+
+    newtype ErrorT e m a = ErrorT { runErrorT :: m (Either e a) }
+
+Note that body of 'ErrorT' is exactly the type of our explicit boilerplate full
+code:
+
+    IO (Either String (Integer,Integer))
+
+where
+
+    m = IO
+    e = String
+    a = (Integer,Integer)
+
+We can thus scrap our boilerplate, and rewrite modify to run in a new ErrorT monad.
+We replace the use of IO and Either with a new monad, Shell, with its own
+MonadError instance:
+
+    newtype Shell a = Shell { runShell :: ErrorT String IO a }
+        deriving (Functor, Monad, MonadIO)
+
+In this way any errors thrown will be translated to useful strings in the Shell
+monad. We can now implement a custom 'throwError' for our Shell monad:
+
+    instance MonadError String Shell where
+        throwError = error . ("Shell failed: "++)
+
+running a fragment of Shell code is achieved with:
+
+    shell :: Shell a -> IO (Either String a)
+    shell = runErrorT . runShell
+
+And our 'modify' function has its boilerplate entirely moved into the ';' :
+
+    modify :: String -> (Integer -> Integer) -> Shell (Integer, Integer)
+    modify s f = do {
+        v <- get s;
+        let u = f v;
+        set s u;
+        return (v,u);
+    }
+
+Of course, since this is Haskell, we can scrap our (programmable) semicolons
+too, and just specify which ';' to use in the type:
+
+    modify :: String -> (Integer -> Integer) -> Shell (Integer, Integer)
+    modify s f = do
+        v <- get s
+        let u = f v
+        set s u
+        return (v,u)
+
+Finally, running this code, we get the much nicer, and more specific, error
+output:
+
+    cpuperf: Shell failed: Failed parse: "hw.setperf=0\n"
+
+The error handling boilerplate is hidden by the error handling monad, inside
+the invisible, programmable ';'.
+
+== Adding privilege separation ==
+
+One slightly icky thing at the moment is the use of sudo directly in the code
+to obtain root privileges. In larger software the use and abuse of root
+privileges can be a source of security problems. Some projects got to great
+length to precisely control the scope of code that has root privileges using
+privilege separation.
+
+This kind of property is the kind of thing we can lean on the type system for:
+to implement statically checked privilege separation.
+
+To do this we need to introduce a new type for actions that run with root privileges:
+
+    newtype Priv a = Priv { priv :: Shell a }
+        deriving (Functor, Monad, MonadIO)
+
+Yes! Another monad! It's really just the Shell monad dressed as a new type, so
+we can distinguish the two in the type checker. Note how we lean heavily on
+GHC's newtype deriving to automatically generate boilerplate code implementing
+the basic type classes for our type.  
+
+Now we add a custom error message for any code that fails in privileged mode:
+
+    instance MonadError String Priv  where
+        throwError = error . ("Priv failed: "++)
+
+The key step is to abstract out the taking of root ops into a combinator, and then hiding 
+the Priv constructor:
+
+    runPriv :: String -> Priv String
+    runPriv = Priv . run . ("/usr/bin/sudo " ++)
+
+Now the only way to get Priv status in your types is to actually run the code
+through 'sudo'. So the type 'Priv' means 'this code will be checked by sudo'.
+
+Our set sysctl code becomes:
+
+    set :: String -> Integer -> Priv String
+    set s v = runPriv $ printf "sysctl -w %s=%s" s (show v)
+
+and we explicitly state in the type of 'set' that it runs in the Priv monad,
+not the normal Shell monad.
+
+The cool thing is that we can ask the typechecker now to audit our code for all
+uses of priv commands that are unchecked. Compiling the old code, we get:
+
+    Main.hs:66:4:
+        Couldn't match expected type `Shell t'
+           against inferred type `Priv String'
+
+Great! On line 66 we use a program requiring root privileges as if it was a
+normal user command, the 'set' call in 'modify'.  So now we can check that 
+that is indeed a place we should be taking root ops, and then tag it as safe
+with 'priv':
+
+    modify :: String -> (Integer -> Integer) -> Shell (Integer, Integer)
+    modify s f = do
+        v <- get s
+        let u = f v
+        priv (set s u)
+        return (v,u)
+
+which evaluates runs a fragment of Shell code in the Priv monad. So, if in
+doubt, embed the problem domain in the type system.
+
+== Summary ==
+
+The final code, with error handling and privilege separation on the type level
+boils down to:
+
+    import Shell
+    import Text.Printf
+
+    main = shell $ do
+        (old,new) <- modify "hw.setperf" toggle
+        clock     <- get "hw.cpuspeed"
+        io $ do printf "cpu: %d -> %d\n" old new
+                printf "clock: %f Ghz\n" (fromIntegral clock / 1000 :: Double)
+
+    toggle v = if v == 100 then 0 else 100
+
+
+All the rest is library code. For binding to 'sysctl' nicely:
+
+    --
+    -- Read a sysctl value from the shell
+    --
+    get :: String -> Shell Integer
+    get s = readM . parse =<< run ("sysctl " ++ s)
+      where
+        parse = tail . dropWhile (/= '=') . init
+
+    -- 
+    -- Set a sysctl value. Runs in the Priv monad, and requires root privledges.
+    -- Will prompt for a password.
+    --
+    set :: String -> Integer -> Priv ()
+    set s v = do runPriv $ printf "sysctl -w %s=%s" s (show v)
+                 return ()
+
+    -- 
+    -- Modify a particular sysctl value, using a function applied to the
+    -- current value, yielding a new value. Both the old and new values are
+    -- returned.
+    --
+    modify :: String -> (Integer -> Integer) -> Shell (Integer, Integer)
+    modify s f = do
+        v <- get s
+        let u = f v
+        priv (set s u) -- root
+        return (v,u)
+
+
+And the Shell and Priv monads are implemented as:
+
+    {-# OPTIONS -fglasgow-exts #-}
+
+    module Shell where
+
+    import qualified Process
+
+    import System.IO
+    import System.Exit
+    import Text.Printf
+
+    import Control.Monad.Error
+    import Control.Exception
+
+    newtype Shell a = Shell { runShell :: ErrorT String IO a }
+        deriving (Functor, Monad, MonadIO)
+
+    newtype Priv a = Priv { priv :: Shell a }
+        deriving (Functor, Monad, MonadIO)
+
+    instance MonadError String Shell where
+        throwError = error . ("Shell failed: "++)
+    instance MonadError String Priv  where
+        throwError = error . ("Priv failed: "++)
+
+    shell :: Shell a -> IO (Either String a)
+    shell = runErrorT . runShell
+
+    runPriv :: String -> Priv String
+    runPriv = Priv . run . ("/usr/bin/sudo " ++)
+
+    io :: IO a -> Shell a
+    io = liftIO
+
+    run :: String -> Shell String
+    run = io . Process.run
+
+The entire program is packaged up by Cabal, and available online from
+<a href="http://hackage.haskell.org">Hackage</a>,
+ the central repository of new haskell code and libraries.
+
+Running the damn thing:
+
+    $ cpuperf 
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+    $ cpuperf
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+    $ cpuperf
+    cpu: 100 -> 0
+    clock: 0.6 Ghz
+
+    $ cpuperf
+    cpu: 0 -> 100
+    clock: 1.6 Ghz
+
+The final act is to bind the Haskell program to my ThinkPad's "Access IBM" hotkey:
+
+    tpb -d -t /home/dons/bin/cpuperf
+
+So hitting 'Access IBM' now runs the cpu clock scaling Haskell program.

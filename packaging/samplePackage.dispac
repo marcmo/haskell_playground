@@ -1,0 +1,12 @@
+Name:                eeprom
+Version:             1.1.1
+Description:         package for managing access to eeprom
+Author:              oliver mueller	
+Maintainer:          omueller@lear.com
+Library
+  Build-Depends:      sap==9.9.1
+                      -- wezj==1.0.2
+                      -- base 2.4.1,
+                      -- configuration==1.1.3
+                      -- ecustate >1.0.1 && <2.2.2
+

@@ -1,0 +1,13 @@
+Name:                nvram
+Version:             0.0
+Description:         nvram configuration analysis
+Author:              oliver mueller	
+Maintainer:          oliver.mueller@gmail.com
+Build-Type:          Simple
+Cabal-Version: 		 >= 1.2
+
+Executable nvram
+  Main-is:             Main.hs
+  Build-Depends:       base,filepath,directory,haskell98,parsec,mtl
+  ghc-options:         -O2 -main-is main
+

@@ -1,0 +1,21 @@
+Name:                packaging
+
+Version:             0.1
+Synopsis:            package arbitrary software modules
+License:             BSD3
+License-file:        LICENSE
+Author:              oliver mueller
+Maintainer:          oliver.mueller@gmail.com
+Stability:           Experimental
+Category:            Distribution
+Build-type:          Simple
+
+Cabal-version:       >=1.2
+
+
+Executable packaging
+  Main-is:            PackageParser.hs 
+  
+  Build-depends:      containers,base,mtl,haxr,unix,filepath,Cabal,haskell98,directory
+  
+  

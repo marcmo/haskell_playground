@@ -1,0 +1,21 @@
+NvmConfig FEM {
+   SwcName SwcNvmAdapterFEM
+   Block SwcTcIntegrationTcZuendungEinQueueContext {
+      ID 12
+      Type native
+      Size 3
+      Redundant false
+      Secret false
+   }
+   Block SwcTcIntegrationTcZuendungEinQueueContext {
+      ID 12
+      Type native
+      Size 3
+      DefaultData "0 0 0"
+      Redundant false
+      Secret false
+      Checksum crc16
+      UseRtePim RTEPi
+      DatasetSize 22
+   }
+}

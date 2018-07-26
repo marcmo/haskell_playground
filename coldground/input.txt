@@ -1,0 +1,34 @@
+module RecursiveContents (getRecursiveContents) where
+
+import Control.Monad (forM,filterM)
+import System.Directory (doesDirectoryExist, getDirectoryContents)
+import System.FilePath ((</>))
+import Text.Regex.Posix
+import Data.Char(toUpper)
+
+getRecursiveContents :: (FilePath -> Bool) -> FilePath -> IO [FilePath]
+getRecursiveContents p topdir = do
+  names <- getDirectoryContents topdir
+  allDirs <- filterM doesDirectoryExist names
+  let properDirs = filter (not . (`elem` [".", ".."])) allDirs
+  let properNames = filter p names
+  properNamesAndDirs <- return (properNames ++ properDirs)-- ++ properNames
+  paths <- forM properNamesAndDirs $ \name -> do
+    let path = topdir </> name
+    isDirectory <- doesDirectoryExist path
+    if isDirectory
+      then getRecursiveContents p path
+      else return [path]
+  return (concat paths)
+
+isImageFile :: FilePath -> Bool
+isImageFile = (=~ "\\.(gif|jpg)$")
+getFiles :: FilePath -> IO [FilePath]
+getFiles topdir = getRecursiveContents 
+                       (not . (`elem` [".", ".."])) topdir
+getImageFiles topdir = getRecursiveContents isImageFile topdir
+
+
+main = do 
+       inpStr <- readFile "input.txt"
+       writeFile "output.txt" (map toUpper inpStr)

@@ -1,0 +1,9 @@
+package service.icamManagement;
+
+import "icamManagement.proto";
+import "common.proto";
+
+service ICamManagement {
+	rpc goToBootmode(service.Void) returns (service.Void);
+}
+

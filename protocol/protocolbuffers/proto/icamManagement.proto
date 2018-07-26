@@ -1,0 +1,7 @@
+package service.icamManagement;
+
+import "common.proto";
+
+enum ServiceId {
+	SERVICE_ID_ICAMMANAGEMENT = 50;
+}

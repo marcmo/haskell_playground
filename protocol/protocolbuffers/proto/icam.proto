@@ -1,0 +1,95 @@
+package service.icam;
+
+import "common.proto";
+
+enum FrameRateEnum {
+	FR_7_5 = 0;
+	FR_15 = 1;
+	FR_30 = 2;
+	FR_AUTO = 3;
+}
+
+enum ServiceId {
+	SERVICE_ID_ICAM = 13;
+}
+
+message CameraStatus {
+	message CameraCalibration {
+		required uint32 fisheyeAmt = 1;
+		required sint32 cxOffsPix3rds = 2;
+		required sint32 cyOffsPix3rds = 3;
+		required sint32 hfovDeg64ths = 4;
+		required sint32 optAxisXOffsPix3rds = 5;
+		required sint32 optAxisYOffsPix3rds = 6;
+		required sint32 optAxisZOffsPix3rds = 7;
+	}
+
+	required bool imageError = 1;
+	required bool imageIsHdr = 2;
+	required bool antiBloomingModeEnabled = 3;
+	required bool antiBloomingActive = 4;
+	required bool lowLightState = 5;
+	required FrameRateEnum desiredFramerate = 6;
+	required FrameRateEnum actualFramerate = 7;
+	required uint32 cameraTemperature = 9;
+	required bool heaterActive = 10;
+	required uint32 heaterDutyCycle = 11;
+	required bool imagerOn = 12;
+	required bool memoryTestDone = 13;	// wird der durch performSelfCheck angestossen ? dann besser ein callback oder ?
+	required bool resetPerformed = 14;
+	required bool i2cError = 15;
+	required bool vbatError = 16;
+	required uint32 adcVBat = 17;
+	required uint32 adcVImager = 18;
+	required uint32 adcChannel3 = 19;
+	required uint32 adcChannel4 = 20;
+	required bool imagerVSupplyError = 21;
+	required CameraCalibration cameraCalibration = 22;
+	required uint32 errorCounterFlash = 23;		// ???
+	required uint32 errorCounterRam = 24;		// ???
+	required uint32 errorCounterI2C = 25;		// ???
+	required uint32 errorCounterEth = 26;		// ???
+	required uint32 errorCounterImager = 27;	// ???	
+}
+
+message CameraConfiguration {
+	enum WhiteBalaceEnum {
+		GRAY_WORLD = 0;
+		COLOR_LUMINANCE = 1;
+	}
+	message Exposure {
+		required FrameRateEnum frameRate = 1;
+		required uint32 luminanceAverageThreshold = 2;
+		required uint32 agcThreshold = 3;
+	}
+	
+  	optional bool hdrOn = 1 [default = true];
+	optional bool autoExposureOn = 2 [default = true];
+	optional float gainFactor = 3 [default = 1];
+	optional WhiteBalaceEnum whiteBalanceAlgorithm = 4 [default = COLOR_LUMINANCE];
+	optional bool flickerDetectionOn = 5 [default = true];
+	optional bool lensCorrection = 6 [default = true];
+	optional bool gammaCorrectionOn = 7 [default = true];
+	optional bool denoiseOn = 8 [default = true];
+	optional uint32 sharpnessLevel = 9 [default = 1000];
+	optional bool wbPixelCancellationOn = 10 [default = true];
+	optional float scaling = 11 [default = 1];
+	optional bool heaterOn = 12 [default = true];
+	optional bool nvmStatus = 13 [default = true];
+	optional bool coderActive = 14 [default = true];
+	optional bool imagerActive = 15 [default = true];
+	optional Exposure exposure = 16;
+}
+
+message CalibrationStatus {
+	enum Status {
+		CALIBRATED = 0;
+		UNCALIBRATED = 1;
+		CALIBRATION_ONGOING = 2;
+	}
+	required Status calibrationStatus = 1; 	
+}
+
+
+
+

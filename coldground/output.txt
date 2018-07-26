@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/slimbox.js"></script>
+	<link rel="stylesheet" href="css/slimbox.css" type="text/css" media="screen" />
+	<style type="text/css">
+		body {
+			background-color: #77b;
+			font-family: Arial, helvetica, sans-serif;
+			color: #fff;
+		}
+		h1, p {
+			text-align: center;
+		}
+		p {
+			margin-top: 100px;
+		}
+		a {
+			font-weight: bold;
+			color: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Slimbox example page</h1>
+	<p>
+<a href="./alaska/01Alaska Harbour.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/02Ferry view.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/03shoot the signe.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/04a Kodiak routefinding.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/04b Caro+Steve at the helicopter.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/05Preparations.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/06steep climb.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/07Alaska late-spring-powder.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/08 Kodiak first (descend) drop.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/09 Kodiak kicker.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/10 Backcountry-hiking on Kodiak.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/11 Kodiak Grizzly.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/12 Kodiak buffalo-streetguard.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/13 Kodiak supermarket.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/14 Kodiak waves.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/15 Kodiak surf.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/16 Surfing Angel.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/17 Glacierplane and  Caro.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/18 first descend.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/19 Jan's Peak powder.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/20 Ocean jump.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/23 hiking at 10.30pm.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/24 late sunset(11.30pm).jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/25 Sunsetboarding.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/26 Newspaper.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/7b jump of pain.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+<a href="./alaska/burnig sky on Kodiak.jpg" rel="lightbox"  title="Monkey temple">Click here</a> to see.
+	</p>
+</body>
+</html>

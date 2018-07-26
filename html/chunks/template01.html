@@ -1,0 +1,35 @@
+<!-- BEGIN page -->
+<html>
+<head>
+<title>Testing some templates</title>
+</head>
+<body>
+
+<p>A Table might appear below.</p>
+
+<!-- ##table## -->
+<!-- BEGIN table -->
+<table>
+<tr>
+<th>x</th>
+<th>2 * x</th>
+<th>x ^ 2</th>
+<th>x ^ x</th>
+</tr>
+<!-- ##rows## -->
+<!-- BEGIN row -->
+<tr>
+<td>##x##</td>
+<td>##x_two##</td>
+<td>##x_squared##</td>
+<td>##x_xd##</td>
+<!-- END -->
+</table>
+<!-- END -->
+
+<p>See the Example01.hs file. Now imagine combining this with the
+Text.XHTML or Text.HTML combinator libraries!</p>
+
+</body>
+</html>
+<!-- END -->

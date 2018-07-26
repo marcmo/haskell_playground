@@ -1,0 +1,123 @@
+NvmConfig FEM {
+
+Block SwcCfCfKeyTypeFrequency {
+Compatibility 0, 4
+}
+Block SwcCfCfEcuSgbmHwabLogisticData {
+Compatibility 4, 6
+}
+Block SwcCfCfFondCommanderId {
+Compatibility 10, 6
+}
+Block SwcCfCfKeyProgDate {
+Compatibility 16, 6
+}
+Block SwcCfCfKeyStartCycleCount {
+Compatibility 22, 6
+}
+Block SwcCfCfKeyWakeUpNr {
+Compatibility 28, 6
+}
+Block SwcCfCfRegistrationDate {
+Compatibility 34, 6
+}
+Block SwcCfCfTeleSenderSequenceCount0 {
+Compatibility 40, 6
+}
+Block SwcCfCfTeleSenderSequenceCount1 {
+Compatibility 46, 6
+}
+Block SwcTcIntegrationTcState {
+Compatibility 52, 7
+}
+Block SwcCfCfKeyInitPlantStation {
+Compatibility 59, 10
+}
+Block SwcCfCfTeleSenderInitData0 {
+Compatibility 69, 10
+}
+Block SwcCfCfTeleSenderInitData1 {
+Compatibility 79, 10
+}
+Block SwcCfCfEcuDefaultRandom {
+Compatibility 89, 38
+}
+Block SwcLampsDriverLampsKurzschlusscounterAbs {
+Compatibility 127, 66
+}
+Block SwcTcIntegrationTcIntegrationPimMontageMode {
+Compatibility 193, 3
+}
+Block SwcCfCfKeySequenceCount0 {
+Compatibility 196, 6
+}
+Block SwcCfCfKeySequenceCount1 {
+Compatibility 202, 6
+}
+Block SwcCfCfKeySequenceCount2 {
+Compatibility 208, 6
+}
+Block SwcCfCfKeySequenceCount3 {
+Compatibility 214, 6
+}
+Block SwcCfCfKeySequenceCount4 {
+Compatibility 220, 6
+}
+Block SwcCfCfKeySequenceCount5 {
+Compatibility 226, 6
+}
+Block SwcCfCfKeySequenceCount6 {
+Compatibility 232, 6
+}
+Block SwcCfCfKeySequenceCount7 {
+Compatibility 238, 6
+}
+Block SwcCfCfKeySequenceCount8 {
+Compatibility 244, 6
+}
+Block SwcCfCfKeySequenceCount9 {
+Compatibility 250, 6
+}
+Block SwcCfCfKeySequenceCount10 {
+Compatibility 256, 6
+}
+Block SwcCfCfKeySequenceCount11 {
+Compatibility 262, 6
+}
+Block SwcCfCfKeySequenceCount12 {
+Compatibility 268, 6
+}
+Block SwcCfCfKeySequenceCount13 {
+Compatibility 274, 6
+}
+Block SwcCfCfKeySequenceCount14 {
+Compatibility 280, 6
+}
+Block SwcCfCfKeySequenceCount15 {
+Compatibility 286, 6
+}
+Block SwcCfCfKeySequenceCount16 {
+Compatibility 292, 6
+}
+Block SwcCfCfKeySequenceCount17 {
+Compatibility 298, 6
+}
+Block SwcCfCfKeySequenceCount18 {
+Compatibility 304, 6
+}
+Block SwcCfCfKeySequenceCount19 {
+Compatibility 310, 6
+}
+Block SwcSfDfzDfzKey {
+Compatibility 316, 18
+}
+Block SwcSfDfzDfzLfKey {
+Compatibility 334, 4
+}
+Block SwcSfPiaClientFemNvmPiaId {
+Compatibility 338, 4
+}
+Block SwcSfPiaClientFemNvmPiaProfile {
+Compatibility 342, 156
+}
+}

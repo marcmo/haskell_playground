@@ -1,0 +1,15 @@
+name:                $ProjectName$
+version:             0.1
+synopsis:            
+description:         
+category:            $Category$
+license:             BSD3
+license-file:        LICENSE
+author:              $Author$
+maintainer:          $Maintainer$
+build-depends:       base
+build-type:          Simple
+
+library
+   exposed-modules: 
+   

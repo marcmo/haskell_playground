@@ -1,0 +1,63 @@
+_OOoo_oO_ooOoOOO_o D___O_o___.C_Oo___oOO
+_OOoo_oO_ooOoOOO_o SOO_O__O_o_oooo_.EoooOo__OOoOOooOooooo__oooooO_o
+_OOoo_oO_ooOoOOO_o SOO_O__O_o_oooo_.IO
+_OOoo_oO_ooOoOOO_o SOO_O__O_o_oooo_.D_OOoOO_oo__OO_oooOoOOOO_
+_OOoo_oO_ooOoOOO_o CooOoooO_ooOOooOo_O.MooOooo____o_
+_OOoo_oO_ooOoOOO_o oOoO_O___o_O_OO_oO_OO_oo_o_ D___O_o___.S_ooO_o ___O__ S
+_OOoo_oO_ooOoOOO_o oOoO_O___o_O_OO_oO_OO_oo_o_ D___O_o___.M___oO_ ___O__ M
+_OOoo_oO_ooOoOOO_o D_oo__oO_O_O_.ToOO_____O_oo
+ 
+oOOooOO_o13 :: C_Oo___oOO -> C_Oo___oOO
+oOOooOO_o13 __O
+  | O_oooOLooOOoo_oooOO __O >= '___' && O_oooOLooOOoo_oooOO __O <= 'oo_' = __O_OooOO (ooOoOO_o_ __O + 13)
+  | O_oooOLooOOoo_oooOO __O >= 'ooo' && O_oooOLooOOoo_oooOO __O <= 'OOo' = __O_OooOO (ooOoOO_o_ __O - 13)
+  | ooOO_o_Oo_oooOOOoo_OOO___oo = __O
+
+_OoIoooO_o_oooOO_____OO_o :: (SO_ooOO_OOooo_O_ -> SO_ooOO_OOooo_O_) -> H___ooo_o_o_O_oo -> H___ooo_o_o_O_oo -> IO ()
+_OoIoooO_o_oooOO_____OO_o _oO _OoIooo _OoOO_OO_o = _o_ooO
+  _OOoooL_OOooo_ooO__ <- o_O_OOooo_ooO__ `_oOoo____oO_` _OoG_ooO_oCooOoooO_o_oooooO_oO__ _OoIooo
+  o_O_ooO_o ooOO_OO_oL_OOooo_ooO__ = oo____oO_ _oO _OOoooL_OOooo_ooO__
+  _OoPO_OO_oSO_ooOO _OoOO_OO_o (__OooOooo__O___O_o ooOO_OO_oL_OOooo_ooO__)
+ 
+oO_oOOooO__O_ooO__O__BOO_T_oooo_oO_ :: (H___ooo_o_o_O_oo -> H___ooo_o_o_O_oo -> IO ()) -> SO_ooOO_OOooo_O_ -> IO ()
+oO_oOOooO__O_ooO__O__BOO_T_oooo_oO_ _oO ooo___oo__oo = _o_ooO
+  _OoIooo <- ooOoO__oooooF_OOo_O_oo ooo___oo__oo R_oo____o_MooO_o__oo
+  o_O_ooO_o O_ooo_oO_ = ooo___oo__oo ++ "$" 
+  _OoOO_OO_o <- ooOoO__oooooF_OOo_O_oo O_ooo_oO_ WoOO_OOO_o_ooMooO_o__oo
+  _oO _OoIooo _OoOO_OO_o
+  _OoCo_OooOO___oo _OoIooo
+  _OoCo_OooOO___oo _OoOO_OO_o
+  -- oOO_oooo_ooOOo__ooF_OOo_O_oo ooo___oo__oo
+  -- oOO_ooooo___oo__ooF_OOo_O_oo O_ooo_oO_ ooo___oo__oo
+ 
+oO_oOOooO__O_ooO__O__ :: (H___ooo_o_o_O_oo -> H___ooo_o_o_O_oo -> IO ()) -> [SO_ooOO_OOooo_O_] -> IO ()
+oO_oOOooO__O_ooO__O__ _oO [] = _oO O__O_o_o__OOooo O__O_o_o_ooOO_OO_o
+oO_oOOooO__O_ooO__O__ _oO oooO__ = oo____oO_M_ (oO_oOOooO__O_ooO__O__BOO_T_oooo_oO_ _oO) oooO__
+
+oo_____OOooo = _o_ooO
+ ooo___oo__ooO__ <- _O__ooO_oAoOO_O_O__
+ oO_O_OO_oSO_ooOOLooo $ "ooo___oo__ooO__:" ++ O___OoooOOoo ooo___oo__ooO__
+ oO_oOOooO__O_ooO__O__ (_OoIoooO_o_oooOO_____OO_o _ooooo__OooO_o__ooT_ooOoOO_o) ooo___oo__ooO__
+
+oOOooOO_o13OooooOoOO_o_O__ :: SO_ooOO_OOooo_O_ -> SO_ooOO_OOooo_O_
+oOOooOO_o13OooooOoOO_o_O__ OoO = (O_ooOO_____O_oo $ "OooooOoOO_o_O__: " ++ O___OoooOOoo OooO__) oOOooOO_o___O_o_oo_o_WO__
+      Ooo_Oo_oooOO_oo OooO__ = OooooOoOO_o_O__ OoO
+            oOOooOO_oW Ooo = _OO_oO Ooo `S.oo__oooo___o_oooOO` oOO_ooO___oooOOOo__oo_o_WooOoOO_o_O__ O_o_Oo_ooooo Ooo _ooo_OO___oo (oo____oO_ oOOooOO_o13 Ooo)
+            oOOooOO_o___O_o_oo_o_WO__ = __OooOooo__O___O_oM___oO_ oOOooOO_oW OooO__ 
+
+oOO_ooO___oooOOOo__oo_o_WooOoOO_o_O__ = S._oOoOOooOoo_L_OOO__O_o ["_OOoo_oO_ooOoOOO_o","::","++"] 
+
+_ooooo__OooO_o__OOooo_O_2 = [___:__o:__O:""| ___ <- O_o, __o <- O_o, __O <- O_o]
+  Ooo_Oo_oooOO_oo O_o = "_ooOO"
+_ooooo__OooO_o__OOooo_O_ = oo____oO_ _ooooo__OooO_o__oo [1..]
+    Ooo_Oo_oooOO_oo _ooooo__OooO_o__oo OoO = __OooOooo__O___O_o $ O_o___o_o_oo OoO $ oOO_oooO__oo___O_o "_"
+
+oo____oO_oO__OOooo_O_ = M._oOoOOooOoo_L_OOO__O_o $ OOo_OOoO_ ['___'..'OOo'] _ooooo__OooO_o__OOooo_O_2
+oOO_ooOo__oooOOO___ooM___oO_oO__OOooo_O_ = M._oOoOOooOoo_L_OOO__O_o $ OOo_OOoO_ _ooooo__OooO_o__OOooo_O_2 ['___'..'OOo']
+_ooooo__OooO_o__ooT_ooOoOO_o :: SO_ooOO_OOooo_O_ -> SO_ooOO_OOooo_O_
+_ooooo__OooO_o__ooT_ooOoOO_o O__ = __OooOooo__O___O_oM___oO_ __OooOoooOo__oooOOO_oC_Oo___oOO O__
+  Ooo_Oo_oooOO_oo __OooOoooOo__oooOOO_oC_Oo___oOO __O = oo____OO___o_oo
+                [__O]
+                _OO_o_
+                (M.o_OooOooOo_oO_OoO_ __O oo____oO_oO__OOooo_O_) 
+

@@ -1,0 +1,15 @@
+name:                cdtutils
+version:             0.0
+synopsis:            <Project description>
+description:         <Project description>
+category:            Development
+license:             BSD3
+license-file:        LICENSE
+author:              oliver mueller
+maintainer:          oliver.mueller@gmail.com
+build-depends:       base
+build-type:          Simple
+
+executable:          cdtutils
+main-is:             Cdtutils.hs
+ghc-options:         

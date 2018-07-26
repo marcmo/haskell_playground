@@ -1,0 +1,2 @@
+127.0.0.1 - - [05/Oct/2011:19:35:56 +0200] "GET /echo/thisandthat2 HTTP/1.1" 200 - - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.6 (KHTML, like Gecko) Chrome/16.0.898.0 Safari/535.6"
+127.0.0.1 - - [05/Oct/2011:19:35:56 +0200] "GET /favicon.ico HTTP/1.1" 404 3 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.6 (KHTML, like Gecko) Chrome/16.0.898.0 Safari/535.6"

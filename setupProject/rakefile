@@ -1,0 +1,20 @@
+require 'rake/clean'
+
+CLEAN.include('*.o')
+CLEAN.include('*.hi')
+CLEAN.include('dist')
+CLEAN.include('output.txt')
+Executable = 'dist/build/aliens/aliens'
+SrcFiles = FileList.new('**/*.hs')
+
+file Executable => SrcFiles do
+  sh "runhaskell Setup.hs configure"
+  sh "runhaskell Setup.hs build"
+end
+file :run => Executable do
+	puts 'running...'
+	sh './dist/build/aliens/aliens'
+end
+task :build => [Executable]
+
+task :default => [:clean, :build]

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+
+<cconfiguration id="cdt.managedbuild.config.diab.lib.debug.143080274">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.diab.lib.debug.143080274" moduleId="org.eclipse.cdt.core.settings" name="Debug_Tiger">
+<externalSettings>
+
+<externalSetting>
+<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/diagnosis"/>
+<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/diagnosis/Debug_Tiger"/>
+</externalSetting>
+
+</externalSettings>
+
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.lear.eclipse.cdt.diab.DCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.diab.DCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.diabcompiler.DCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+
+</storageModule>
+
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+
+<configuration artifactExtension="a" artifactName="diagnosis" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.diabcompiler.DCCErrorParser;org.eclipse.cdt.diab.DCCErrorParser" id="cdt.managedbuild.config.diab.lib.debug.143080274" name="Debug_Tiger" parent="cdt.managedbuild.config.diab.lib.debug">
+<folderInfo id="cdt.managedbuild.config.diab.lib.debug.143080274.166576425" name="/" resourcePath="">
+<toolChain id="diab.toolchain.1083989733" name="Diab Toochain" superClass="diab.toolchain">
+<targetPlatform id="diab.targetPlatform.1503181217" name="Debug Platform" superClass="diab.targetPlatform"/>
+<builder buildPath="${workspace_loc:/diagnosis/Debug_Tiger}" id="cdt.managedbuild.target.diab.debug.447720140" keepEnvironmentInBuildfile="false" name="Diab Make Builder" superClass="cdt.managedbuild.target.diab.debug"/>
+<tool command="dcc" id="cdt.managedbuild.tool.diab.cpp.compiler.so.debug.63858974" name="Diab C++ Compiler" superClass="cdt.managedbuild.tool.diab.cpp.compiler.so.debug">
+<option id="diab.cpp.compiler.option.include.paths.1842727198" name="Include paths (-I)" superClass="diab.cpp.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../configuration/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../eepromManager/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../common/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../transport/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../eepromManager/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../Logger/include&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../../zgwAutosarOs/include&quot;"/>
+</option>
+<option id="diab.cpp.compiler.category.target.395988495" name="Target" superClass="diab.cpp.compiler.category.target" value="diab.cpp.compiler.category.target.tigervle" valueType="enumerated"/>
+<option id="diab.cpp.compiler.option.misc.optimization.1944225206" name="Optimization (-O)" superClass="diab.cpp.compiler.option.misc.optimization" value="true" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.optimization.size.176648288" name="Optimize size" superClass="diab.cpp.compiler.option.misc.optimization.size" value="true" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.optimization.extended.1117562281" name="Extended optimization (-XO)" superClass="diab.cpp.compiler.option.misc.optimization.extended" value="true" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.Xcode-absolute-far.1714431451" name="Xcode-absolute-far" superClass="diab.cpp.compiler.option.misc.Xcode-absolute-far" value="false" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.Xsmall-const=0.792153396" name="Xsmall-const=0" superClass="diab.cpp.compiler.option.misc.Xsmall-const=0" value="true" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.Xsmall-data=0.1661347637" name="Xsmall-data=0" superClass="diab.cpp.compiler.option.misc.Xsmall-data=0" value="false" valueType="boolean"/>
+<option id="diab.cpp.compiler.option.misc.other.399697946" name="OtherFlags" superClass="diab.cpp.compiler.option.misc.other" value="-c -Xexceptions-off -Xrtti-off -Xenum-is-best" valueType="string"/>
+<option id="cdt.managedbuild.tool.diab.cpp.compiler.so.debug.option.1218734126" name="DebugLevel" superClass="cdt.managedbuild.tool.diab.cpp.compiler.so.debug.option" value="diab.cpp.debugging.level.on" valueType="enumerated"/>
+<option id="diab.cpp.compiler.option.preprocessor.nostdinc.277502432" name="Preprocessor settings" superClass="diab.cpp.compiler.option.preprocessor.nostdinc"/>
+<option id="diab.cpp.compiler.option.preprocessor.symbols.311380118" name="Defined symbols (-D)" superClass="diab.cpp.compiler.option.preprocessor.symbols"/>
+<inputType id="cdt.managedbuild.tool.diab.cpp.compiler.input.547749257" superClass="cdt.managedbuild.tool.diab.cpp.compiler.input"/>
+</tool>
+<tool command="dcc" id="cdt.managedbuild.tool.diab.c.compiler.so.debug.622333011" name="Diab C Compiler" superClass="cdt.managedbuild.tool.diab.c.compiler.so.debug">
+<option id="diab.c.compiler.category.target.1587495786" name="Target" superClass="diab.c.compiler.category.target" value="diab.c.compiler.category.target.tigervle" valueType="enumerated"/>
+<option id="diab.c.compiler.option.misc.other.309378064" name="OtherFlags" superClass="diab.c.compiler.option.misc.other" value="-c -Xenum-is-best" valueType="string"/>
+<option id="diab.c.compiler.option.misc.optimization.1308289134" name="Optimization (-O)" superClass="diab.c.compiler.option.misc.optimization" value="true" valueType="boolean"/>
+<option id="diab.c.compiler.option.misc.optimization.extended.630059350" name="Extended optimization (-XO)" superClass="diab.c.compiler.option.misc.optimization.extended" value="true" valueType="boolean"/>
+<option id="diab.c.compiler.option.misc.optimization.size.6858724" name="Optimize size" superClass="diab.c.compiler.option.misc.optimization.size" value="true" valueType="boolean"/>
+<option id="diab.c.compiler.option.misc.Xcode-absolute-far.1515186846" name="Xcode-absolute-far" superClass="diab.c.compiler.option.misc.Xcode-absolute-far" value="false" valueType="boolean"/>
+<option id="diab.c.compiler.option.misc.Xsmall-const=0.970884624" name="Xsmall-const=0" superClass="diab.c.compiler.option.misc.Xsmall-const=0" value="true" valueType="boolean"/>
+<option id="diab.c.compiler.option.misc.Xsmall-data=0.544203107" name="Xsmall-data=0" superClass="diab.c.compiler.option.misc.Xsmall-data=0" value="false" valueType="boolean"/>
+<option id="cdt.managedbuild.tool.diab.c.compiler.so.debug.option.655941611" name="DebugLevel" superClass="cdt.managedbuild.tool.diab.c.compiler.so.debug.option" value="diab.c.debugging.level.on" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.diab.c.compiler.input.1562104333" superClass="cdt.managedbuild.tool.diab.c.compiler.input"/>
+</tool>
+<tool id="cdt.managedbuild.tool.diab.archiver.so.debug.266519803" name="Diab Archiver" superClass="cdt.managedbuild.tool.diab.archiver.so.debug">
+<option id="diab.both.lib.option.flags.563648050" name="Archiver Flags" superClass="diab.both.lib.option.flags"/>
+</tool>
+<tool id="cdt.managedbuild.tool.diab.assembler.so.debug.1218799642" name="Diab Assembler" superClass="cdt.managedbuild.tool.diab.assembler.so.debug">
+<option id="diab.asm.category.target.1924599168" name="Target" superClass="diab.asm.category.target" value="diab.asm.compiler.target.tigervle" valueType="enumerated"/>
+<inputType id="cdt.managedbuild.tool.diab.assembler.input.259168218" superClass="cdt.managedbuild.tool.diab.assembler.input"/>
+</tool>
+<tool id="cdt.managedbuild.tool.diab.cpp.linker.cygwin.base.1670563283" name="Diab Linker" superClass="cdt.managedbuild.tool.diab.cpp.linker.cygwin.base"/>
+</toolChain>
+</folderInfo>
+<sourceEntries>
+<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="include"/>
+<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
+</sourceEntries>
+</configuration>
+</storageModule>
+
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="diagnosis.cdt.managedbuild.target.diab.lib.1332548534" name="Static Library (Diab on Windows)" projectType="cdt.managedbuild.target.diab.lib"/>
+</storageModule>
+</cproject>
+

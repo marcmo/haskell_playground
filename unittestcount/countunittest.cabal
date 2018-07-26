@@ -1,0 +1,14 @@
+Name:                countunittest
+Version:             0.0
+Description:         utility to count unittests
+License:             no
+License-file:        LICENSE
+Author:              oliver mueller	
+Maintainer:          oliver.mueller@gmail.com
+Build-Depends:       base,regex-posix,regex-compat,filepath,directory,haskell98,bytestring
+Build-Type:          Simple
+
+Executable:          cppunittestcount
+Main-is:             CountUnitTests.hs
+ghc-options:         -O2 -main-is CountUnitTests
+

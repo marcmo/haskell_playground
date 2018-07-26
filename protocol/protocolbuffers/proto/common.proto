@@ -1,0 +1,16 @@
+package service;
+
+message Void {
+}
+
+message AckVoid {
+}
+
+message ServiceId {
+	required int32 id = 1;
+	optional int32 instId = 2;
+}
+
+message NotificationServiceEndpoint {
+	required ServiceId service = 1;
+}

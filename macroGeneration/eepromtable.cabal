@@ -1,0 +1,12 @@
+Name:                eepromtable
+Version:             0.0
+Description:         macro generation for eeprom table
+Author:              oliver mueller	
+Maintainer:          omueller@lear.com
+Build-Depends:       base,filepath,directory,haskell98,parsec
+Build-Type:          Simple
+Cabal-Version: 		 >= 1.2
+Executable:          macrogeneration
+Main-is:             Main.hs
+ghc-options:         -O2 -main-is main
+

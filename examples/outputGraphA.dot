@@ -1,0 +1,10 @@
+digraph G {
+subgraph cluster_aa {
+color=blue;
+aa1;aa2;aa3;
+aa1 -> aa3;
+aa1 -> aa2;
+aa2 -> aa3;
+label="graph aa"
+}
+}

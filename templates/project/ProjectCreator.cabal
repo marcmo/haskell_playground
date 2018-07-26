@@ -1,0 +1,12 @@
+name:                ProjectSetup
+version:             0.2
+description:         create project framework
+category:            Distribution
+license:             BSD3
+build-depends:       base, mtl, directory, filepath, containers, time,
+                     HStringTemplate
+build-type:          Simple
+
+executable:          createProjectSetup
+main-is:             ProjectCreator.hs
+ghc-options:

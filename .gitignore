@@ -1,0 +1,12 @@
+.DS_Store
+*.exe
+*.exe.manifest
+*.hi
+*.o
+*.a
+_darcs
+dist
+*~
+*.swp
+*.swo
+

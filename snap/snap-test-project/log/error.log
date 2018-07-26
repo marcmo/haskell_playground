@@ -1,0 +1,3 @@
+[05/Oct/2011:19:35:49 +0200] Server.httpServe: START (EventLoopSimple)
+[05/Oct/2011:19:35:59 +0200] Server.httpServe: SHUTDOWN
+[05/Oct/2011:19:35:59 +0200] Server.httpServe: BACKEND STOPPED

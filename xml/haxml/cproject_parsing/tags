@@ -1,0 +1,61 @@
+CProject	./ProjectInfo/Cproject.hs	6;"	d
+CProject	./ProjectInfo/Cproject.hs	6;"	t
+Configuration	./ProjectInfo/Cproject.hs	12;"	d
+Configuration	./ProjectInfo/Cproject.hs	12;"	t
+HeaderMap	main.hs	17;"	t
+IP	./Util/IncludeFinder.hs	22;"	d
+IncludeLineMap	main.hs	16;"	t
+IncludePaths	./Util/IncludeFinder.hs	22;"	t
+ProjectDependency	./ProjectInfo/Cproject.hs	17;"	d
+ProjectDependency	./ProjectInfo/Cproject.hs	17;"	t
+ProjectEnvFunc	./ProjectInfo/ProjectParser.hs	17;"	t
+StringSet	./Util/IncludeFinder.hs	20;"	t
+absolutPath	./ProjectInfo/Cproject.hs	7;"	v
+add2map	main.hs	55;"	v
+charClass	./Util/GlobRegex.hs	31;"	v	file:
+combineWith	./Util/IncludeFinder.hs	31;"	v	file:
+configFilter	./ProjectInfo/ProjectParser.hs	83;"	v
+configName	./ProjectInfo/ProjectParser.hs	52;"	v
+configs	./ProjectInfo/Cproject.hs	9;"	v
+consolidateDependencies	./ProjectInfo/ProjectParser.hs	20;"	v
+contentToString	./ProjectInfo/ProjectParser.hs	99;"	v
+contentToStringDefault	./ProjectInfo/ProjectParser.hs	95;"	v
+cppCompiler	./ProjectInfo/ProjectParser.hs	84;"	v
+createDependencyGraph	./ProjectInfo/Graph.hs	9;"	v
+dependencies	./ProjectInfo/ProjectParser.hs	28;"	v
+dependents	./ProjectInfo/Cproject.hs	19;"	v
+edges	./ProjectInfo/Graph.hs	12;"	v
+eol	./ProjectInfo/ParserUtil.hs	23;"	v
+escape	./Util/GlobRegex.hs	26;"	v	file:
+existsInFolder	./Util/SearchFiles.hs	33;"	v
+extractIncludePath	./ProjectInfo/Parsing.hs	10;"	v
+extractProjectName	./ProjectInfo/ProjectParser.hs	65;"	v
+extractProjects	./ProjectInfo/ProjectParser.hs	38;"	v
+getAttributes	./ProjectInfo/ProjectParser.hs	91;"	v
+getConfigurations	./ProjectInfo/ProjectParser.hs	45;"	v
+getContent	./ProjectInfo/ProjectParser.hs	42;"	v
+getDependencies	./ProjectInfo/ProjectParser.hs	33;"	v
+getDiabCompilerSetting	./ProjectInfo/ProjectParser.hs	78;"	v
+getIncludeList	./Util/IncludeFinder.hs	26;"	v
+getIncludePaths	./ProjectInfo/ProjectParser.hs	68;"	v
+getProject	./ProjectInfo/Cproject.hs	18;"	v
+getRecursiveContents	./Util/SearchFiles.hs	12;"	v
+globToRegex	./Util/GlobRegex.hs	11;"	v
+globToRegex'	./Util/GlobRegex.hs	13;"	v	file:
+hasSthFromIncludeLines	main.hs	46;"	v
+includeLines	./Util/IncludeFinder.hs	43;"	v	file:
+includeLinesInProject	./Util/IncludeFinder.hs	36;"	v	file:
+includePathFilter	./ProjectInfo/ProjectParser.hs	85;"	v
+includePaths	./ProjectInfo/Cproject.hs	14;"	v
+includePaths	./Util/IncludeFinder.hs	23;"	v
+ipf	./ProjectInfo/ProjectParser.hs	88;"	v
+listMatches	./Util/SearchFiles.hs	24;"	v
+main	main.hs	19;"	v
+matchesGlob	./Util/GlobRegex.hs	36;"	v
+mergeMaps	main.hs	52;"	v
+name	./ProjectInfo/Cproject.hs	13;"	v
+parseProjectDesc	./ProjectInfo/ProjectParser.hs	58;"	v
+parseProjectName	./ProjectInfo/Parsing.hs	15;"	v
+project	./Util/IncludeFinder.hs	22;"	v
+projectName	./ProjectInfo/Cproject.hs	8;"	v
+removeIndirectDeps	main.hs	39;"	v
